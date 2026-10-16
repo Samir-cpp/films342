@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bg_0",
+    "name": "TV natok director",
+    "cash": 80,
+    "debt": 0,
+    "bonus_stat": "Vision",
+    "bonus": 10,
+    "contacts": 2,
+    "problem": "A stalled television contract"
+  },
+  {
+    "id": "bg_1",
+    "name": "Assistant director",
+    "cash": 92,
+    "debt": 0,
+    "bonus_stat": "Script",
+    "bonus": 10,
+    "contacts": 3,
+    "problem": "An overdue equipment invoice"
+  },
+  {
+    "id": "bg_2",
+    "name": "Film-school graduate",
+    "cash": 104,
+    "debt": 0,
+    "bonus_stat": "Direction",
+    "bonus": 10,
+    "contacts": 4,
+    "problem": "No commercial credits"
+  },
+  {
+    "id": "bg_3",
+    "name": "Ad-film maker",
+    "cash": 116,
+    "debt": 0,
+    "bonus_stat": "Leadership",
+    "bonus": 10,
+    "contacts": 5,
+    "problem": "A demanding former client"
+  },
+  {
+    "id": "bg_4",
+    "name": "Content creator",
+    "cash": 128,
+    "debt": 0,
+    "bonus_stat": "Business",
+    "bonus": 10,
+    "contacts": 2,
+    "problem": "An audience expecting free content"
+  },
+  {
+    "id": "bg_5",
+    "name": "Diaspora filmmaker",
+    "cash": 140,
+    "debt": 20,
+    "bonus_stat": "Network",
+    "bonus": 10,
+    "contacts": 3,
+    "problem": "Few local contacts"
+  },
+  {
+    "id": "bg_6",
+    "name": "Writer-turned-director",
+    "cash": 152,
+    "debt": 0,
+    "bonus_stat": "Charm",
+    "bonus": 10,
+    "contacts": 4,
+    "problem": "An unfinished manuscript"
+  },
+  {
+    "id": "bg_7",
+    "name": "Journalist",
+    "cash": 164,
+    "debt": 0,
+    "bonus_stat": "Stamina",
+    "bonus": 10,
+    "contacts": 5,
+    "problem": "An editor waiting for an article"
+  }
+]

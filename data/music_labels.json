@@ -1,0 +1,258 @@
+[
+  {
+    "id": "label_0",
+    "name": "Adnan Sen",
+    "fictional": true,
+    "profession": "label",
+    "age": 12,
+    "tier": 1,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 30,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 40,
+    "budget_range": [
+      50,
+      200
+    ],
+    "control": 30,
+    "loyalty": 30,
+    "red_flag": "None",
+    "personality": "Pragmatic",
+    "price_range": [
+      3,
+      20
+    ],
+    "window": 0
+  },
+  {
+    "id": "label_1",
+    "name": "Samir Alam",
+    "fictional": true,
+    "profession": "label",
+    "age": 21,
+    "tier": 2,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 31,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 41,
+    "budget_range": [
+      50,
+      290
+    ],
+    "control": 34,
+    "loyalty": 33,
+    "red_flag": "Slow decisions",
+    "personality": "Art patron",
+    "price_range": [
+      3,
+      22
+    ],
+    "window": 0
+  },
+  {
+    "id": "label_2",
+    "name": "Rohan Akter",
+    "fictional": true,
+    "profession": "label",
+    "age": 22,
+    "tier": 3,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 32,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 42,
+    "budget_range": [
+      50,
+      380
+    ],
+    "control": 38,
+    "loyalty": 36,
+    "red_flag": "Strict delivery",
+    "personality": "Commercial",
+    "price_range": [
+      3,
+      24
+    ],
+    "window": 0
+  },
+  {
+    "id": "label_3",
+    "name": "Mira Chowdhury",
+    "fictional": true,
+    "profession": "label",
+    "age": 23,
+    "tier": 4,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      26,
+      51
+    ],
+    "reputation": 33,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 43,
+    "budget_range": [
+      50,
+      470
+    ],
+    "control": 42,
+    "loyalty": 39,
+    "red_flag": "None",
+    "personality": "Pragmatic",
+    "price_range": [
+      3,
+      26
+    ],
+    "window": 0
+  },
+  {
+    "id": "label_4",
+    "name": "Nadia Haque",
+    "fictional": true,
+    "profession": "label",
+    "age": 24,
+    "tier": 5,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      34,
+      66
+    ],
+    "reputation": 34,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 44,
+    "budget_range": [
+      50,
+      560
+    ],
+    "control": 46,
+    "loyalty": 42,
+    "red_flag": "Slow decisions",
+    "personality": "Art patron",
+    "price_range": [
+      3,
+      28
+    ],
+    "window": 0
+  },
+  {
+    "id": "label_5",
+    "name": "Farah Sen",
+    "fictional": true,
+    "profession": "label",
+    "age": 25,
+    "tier": 1,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 35,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 45,
+    "budget_range": [
+      50,
+      650
+    ],
+    "control": 50,
+    "loyalty": 45,
+    "red_flag": "Strict delivery",
+    "personality": "Commercial",
+    "price_range": [
+      3,
+      30
+    ],
+    "window": 0
+  },
+  {
+    "id": "label_6",
+    "name": "Tisha Alam",
+    "fictional": true,
+    "profession": "label",
+    "age": 26,
+    "tier": 2,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 36,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 46,
+    "budget_range": [
+      50,
+      740
+    ],
+    "control": 54,
+    "loyalty": 48,
+    "red_flag": "None",
+    "personality": "Pragmatic",
+    "price_range": [
+      3,
+      32
+    ],
+    "window": 0
+  },
+  {
+    "id": "label_7",
+    "name": "Raisa Akter",
+    "fictional": true,
+    "profession": "label",
+    "age": 27,
+    "tier": 3,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 37,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 47,
+    "budget_range": [
+      50,
+      830
+    ],
+    "control": 58,
+    "loyalty": 51,
+    "red_flag": "Slow decisions",
+    "personality": "Art patron",
+    "price_range": [
+      3,
+      34
+    ],
+    "window": 0
+  }
+]

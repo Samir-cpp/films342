@@ -1,0 +1,26 @@
+[
+  {
+    "id": "review_0",
+    "name": "A difficult debut",
+    "min_quality": 0,
+    "text": "The ambition is visible, but the scattered storytelling struggles to connect."
+  },
+  {
+    "id": "review_1",
+    "name": "Flashes of promise",
+    "min_quality": 40,
+    "text": "A few memorable scenes shine through an uneven film. There is a voice worth watching."
+  },
+  {
+    "id": "review_2",
+    "name": "An assured storyteller",
+    "min_quality": 60,
+    "text": "Confident performances and a focused script make this a rewarding evening at the cinema."
+  },
+  {
+    "id": "review_3",
+    "name": "A film that stays with you",
+    "min_quality": 80,
+    "text": "A vivid, emotionally precise film. The images linger long after the lights come up."
+  }
+]

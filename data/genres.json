@@ -1,0 +1,50 @@
+[
+  {
+    "id": "genre_0",
+    "name": "Drama",
+    "color": "#52c7b8",
+    "trend": 0.9
+  },
+  {
+    "id": "genre_1",
+    "name": "Action",
+    "color": "#ed9566",
+    "trend": 0.9400000000000001
+  },
+  {
+    "id": "genre_2",
+    "name": "Romance",
+    "color": "#df8eb9",
+    "trend": 0.98
+  },
+  {
+    "id": "genre_3",
+    "name": "Thriller",
+    "color": "#859eef",
+    "trend": 1.02
+  },
+  {
+    "id": "genre_4",
+    "name": "Comedy",
+    "color": "#e6c86d",
+    "trend": 1.06
+  },
+  {
+    "id": "genre_5",
+    "name": "Family",
+    "color": "#80b7a2",
+    "trend": 1.1
+  },
+  {
+    "id": "genre_6",
+    "name": "Historical",
+    "color": "#b79bdb",
+    "trend": 1.1400000000000001
+  },
+  {
+    "id": "genre_7",
+    "name": "Horror",
+    "color": "#b08b88",
+    "trend": 1.1800000000000002
+  }
+]

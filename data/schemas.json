@@ -1,0 +1,2042 @@
+{
+  "cinema_halls": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "district",
+        "multiplex",
+        "seats",
+        "ticket",
+        "producer_share",
+        "advance"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "district": {
+          "type": "string"
+        },
+        "multiplex": {
+          "type": "boolean"
+        },
+        "seats": {
+          "type": "number"
+        },
+        "ticket": {
+          "type": "number"
+        },
+        "producer_share": {
+          "type": "number"
+        },
+        "advance": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "critics": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill",
+        "budget_range",
+        "control",
+        "loyalty",
+        "red_flag",
+        "personality"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "budget_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "control": {
+          "type": "number"
+        },
+        "loyalty": {
+          "type": "number"
+        },
+        "red_flag": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "benchmark_films": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "budget",
+        "gross",
+        "release_window",
+        "note"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "budget": {
+          "type": "number"
+        },
+        "gross": {
+          "type": "number"
+        },
+        "release_window": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "investors": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill",
+        "budget_range",
+        "control",
+        "loyalty",
+        "red_flag",
+        "personality"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "budget_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "control": {
+          "type": "number"
+        },
+        "loyalty": {
+          "type": "number"
+        },
+        "red_flag": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "economy": {
+    "type": "object",
+    "required": [
+      "currency",
+      "version",
+      "starting_year",
+      "stats",
+      "districts",
+      "genders",
+      "tiers",
+      "ticket",
+      "seats",
+      "shows",
+      "multiplex_share",
+      "big_opening_share",
+      "single_share",
+      "multiplex_fraction",
+      "decay",
+      "wom_growth",
+      "piracy",
+      "max_run",
+      "pitch_base",
+      "minimum_cash",
+      "training_cost",
+      "recovery",
+      "royalty_rate",
+      "loan_interest",
+      "loan_amount",
+      "loan_limit",
+      "base_fee",
+      "rights_base",
+      "rights_quality",
+      "rights_hype",
+      "cast_quality",
+      "script_quality",
+      "direction_quality",
+      "crew_quality",
+      "occupancy_base",
+      "occupancy_cast",
+      "occupancy_hype",
+      "occupancy_quality",
+      "occupancy_cap",
+      "quality_center",
+      "award_random",
+      "retirement_age"
+    ],
+    "properties": {
+      "currency": {
+        "type": "string"
+      },
+      "version": {
+        "type": "number"
+      },
+      "starting_year": {
+        "type": "number"
+      },
+      "stats": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "districts": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "genders": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "tiers": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "name",
+            "budget",
+            "daily_cost",
+            "days",
+            "screens"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "budget": {
+              "type": "number"
+            },
+            "daily_cost": {
+              "type": "number"
+            },
+            "days": {
+              "type": "number"
+            },
+            "screens": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "ticket": {
+        "type": "number"
+      },
+      "seats": {
+        "type": "number"
+      },
+      "shows": {
+        "type": "number"
+      },
+      "multiplex_share": {
+        "type": "number"
+      },
+      "big_opening_share": {
+        "type": "number"
+      },
+      "single_share": {
+        "type": "number"
+      },
+      "multiplex_fraction": {
+        "type": "number"
+      },
+      "decay": {
+        "type": "number"
+      },
+      "wom_growth": {
+        "type": "number"
+      },
+      "piracy": {
+        "type": "number"
+      },
+      "max_run": {
+        "type": "number"
+      },
+      "pitch_base": {
+        "type": "number"
+      },
+      "minimum_cash": {
+        "type": "number"
+      },
+      "training_cost": {
+        "type": "number"
+      },
+      "recovery": {
+        "type": "number"
+      },
+      "royalty_rate": {
+        "type": "number"
+      },
+      "loan_interest": {
+        "type": "number"
+      },
+      "loan_amount": {
+        "type": "number"
+      },
+      "loan_limit": {
+        "type": "number"
+      },
+      "base_fee": {
+        "type": "number"
+      },
+      "rights_base": {
+        "type": "number"
+      },
+      "rights_quality": {
+        "type": "number"
+      },
+      "rights_hype": {
+        "type": "number"
+      },
+      "cast_quality": {
+        "type": "number"
+      },
+      "script_quality": {
+        "type": "number"
+      },
+      "direction_quality": {
+        "type": "number"
+      },
+      "crew_quality": {
+        "type": "number"
+      },
+      "occupancy_base": {
+        "type": "number"
+      },
+      "occupancy_cast": {
+        "type": "number"
+      },
+      "occupancy_hype": {
+        "type": "number"
+      },
+      "occupancy_quality": {
+        "type": "number"
+      },
+      "occupancy_cap": {
+        "type": "number"
+      },
+      "quality_center": {
+        "type": "number"
+      },
+      "award_random": {
+        "type": "number"
+      },
+      "retirement_age": {
+        "type": "number"
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema"
+  },
+  "tv_channels": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "price_range",
+        "window"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "price_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "window": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "music_labels": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill",
+        "budget_range",
+        "control",
+        "loyalty",
+        "red_flag",
+        "personality",
+        "price_range",
+        "window"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "budget_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "control": {
+          "type": "number"
+        },
+        "loyalty": {
+          "type": "number"
+        },
+        "red_flag": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        },
+        "price_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "window": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "holidays": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "week",
+        "multiplier",
+        "note"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "week": {
+          "type": "number"
+        },
+        "multiplier": {
+          "type": "number"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "content": {
+    "type": "object",
+    "required": [
+      "themes",
+      "tones",
+      "eras",
+      "ratings",
+      "sources",
+      "stages",
+      "stage_labels",
+      "stage_weeks",
+      "rival_titles",
+      "tips",
+      "credits"
+    ],
+    "properties": {
+      "themes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "tones": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "eras": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "ratings": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "stages": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "stage_labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "stage_weeks": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "rival_titles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "tips": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "credits": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema"
+  },
+  "events": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "conditions",
+        "choices"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "conditions": {
+          "type": "object",
+          "required": [
+            "stage",
+            "min_week"
+          ],
+          "properties": {
+            "stage": {
+              "type": "string",
+              "enum": [
+                "development",
+                "financing",
+                "packaging",
+                "preproduction",
+                "production",
+                "post",
+                "marketing",
+                "distribution"
+              ]
+            },
+            "min_week": {
+              "type": "number"
+            }
+          }
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "label",
+              "cash",
+              "quality",
+              "hype",
+              "stress",
+              "relationship"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "cash": {
+                "type": "number"
+              },
+              "quality": {
+                "type": "number"
+              },
+              "hype": {
+                "type": "number"
+              },
+              "stress": {
+                "type": "number"
+              },
+              "relationship": {
+                "type": "number"
+              }
+            }
+          },
+          "minItems": 2,
+          "maxItems": 3
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "producers": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill",
+        "budget_range",
+        "control",
+        "loyalty",
+        "red_flag",
+        "personality"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "budget_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "control": {
+          "type": "number"
+        },
+        "loyalty": {
+          "type": "number"
+        },
+        "red_flag": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "censor_rules": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "rating",
+        "delay",
+        "quality_loss"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rating": {
+          "type": "string"
+        },
+        "delay": {
+          "type": "number"
+        },
+        "quality_loss": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "overseas_markets": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "price_range",
+        "window"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "price_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "window": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "genres": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "color",
+        "trend"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "color": {
+          "type": "string"
+        },
+        "trend": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "crew": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "locations": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "cost",
+        "permit",
+        "risk"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cost": {
+          "type": "number"
+        },
+        "permit": {
+          "type": "number"
+        },
+        "risk": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "reviews": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "min_quality",
+        "text"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "min_quality": {
+          "type": "number"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "marketing_agencies": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill",
+        "budget_range",
+        "control",
+        "loyalty",
+        "red_flag",
+        "personality"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "budget_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "control": {
+          "type": "number"
+        },
+        "loyalty": {
+          "type": "number"
+        },
+        "red_flag": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "backgrounds": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "cash",
+        "debt",
+        "bonus_stat",
+        "bonus",
+        "contacts",
+        "problem"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cash": {
+          "type": "number"
+        },
+        "debt": {
+          "type": "number"
+        },
+        "bonus_stat": {
+          "type": "string"
+        },
+        "bonus": {
+          "type": "number"
+        },
+        "contacts": {
+          "type": "number"
+        },
+        "problem": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "actors": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "production_houses": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill",
+        "budget_range",
+        "control",
+        "loyalty",
+        "red_flag",
+        "personality"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "budget_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "control": {
+          "type": "number"
+        },
+        "loyalty": {
+          "type": "number"
+        },
+        "red_flag": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "traits": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "stat",
+        "bonus",
+        "cost_factor",
+        "stress_factor"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stat": {
+          "type": "string"
+        },
+        "bonus": {
+          "type": "number"
+        },
+        "cost_factor": {
+          "type": "number"
+        },
+        "stress_factor": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "journalists": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill",
+        "budget_range",
+        "control",
+        "loyalty",
+        "red_flag",
+        "personality"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "budget_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "control": {
+          "type": "number"
+        },
+        "loyalty": {
+          "type": "number"
+        },
+        "red_flag": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "distributors": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill",
+        "budget_range",
+        "control",
+        "loyalty",
+        "red_flag",
+        "personality"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "budget_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "control": {
+          "type": "number"
+        },
+        "loyalty": {
+          "type": "number"
+        },
+        "red_flag": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "new_talent": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "actresses": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "fictional",
+        "profession",
+        "age",
+        "tier",
+        "genres",
+        "fee_range",
+        "reputation",
+        "availability",
+        "quirks",
+        "skill"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fictional": {
+          "type": "boolean"
+        },
+        "profession": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "tier": {
+          "type": "number"
+        },
+        "genres": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fee_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "reputation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quirks": {
+          "type": "string"
+        },
+        "skill": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "ott_platforms": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "price_range",
+        "window"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "price_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "window": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "festivals_and_awards": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "threshold",
+        "campaign_cost",
+        "prestige"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "campaign_cost": {
+          "type": "number"
+        },
+        "prestige": {
+          "type": "number"
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "minItems": 1
+  },
+  "localization": {
+    "type": "object",
+    "required": [
+      "en",
+      "bn"
+    ],
+    "properties": {
+      "en": {
+        "type": "object",
+        "required": [
+          "new_career",
+          "continue_game",
+          "settings",
+          "next_week",
+          "title",
+          "subtitle",
+          "welcome"
+        ],
+        "properties": {
+          "new_career": {
+            "type": "string"
+          },
+          "continue_game": {
+            "type": "string"
+          },
+          "settings": {
+            "type": "string"
+          },
+          "next_week": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "welcome": {
+            "type": "string"
+          }
+        }
+      },
+      "bn": {
+        "type": "object",
+        "required": [
+          "new_career",
+          "continue_game",
+          "settings",
+          "next_week",
+          "title",
+          "subtitle",
+          "welcome"
+        ],
+        "properties": {
+          "new_career": {
+            "type": "string"
+          },
+          "continue_game": {
+            "type": "string"
+          },
+          "settings": {
+            "type": "string"
+          },
+          "next_week": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "welcome": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema"
+  }
+}

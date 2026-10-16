@@ -1,0 +1,1370 @@
+[
+  {
+    "id": "crew_0",
+    "name": "Rafi Karim",
+    "fictional": true,
+    "profession": "Writer",
+    "age": 12,
+    "tier": 1,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      1,
+      8
+    ],
+    "reputation": 30,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 40
+  },
+  {
+    "id": "crew_1",
+    "name": "Imran Kabir",
+    "fictional": true,
+    "profession": "DOP",
+    "age": 21,
+    "tier": 2,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      2,
+      9
+    ],
+    "reputation": 31,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 41
+  },
+  {
+    "id": "crew_2",
+    "name": "Tariq Khan",
+    "fictional": true,
+    "profession": "Editor",
+    "age": 22,
+    "tier": 3,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      3,
+      10
+    ],
+    "reputation": 32,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 42
+  },
+  {
+    "id": "crew_3",
+    "name": "Hasan Bose",
+    "fictional": true,
+    "profession": "Art director",
+    "age": 23,
+    "tier": 4,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      4,
+      11
+    ],
+    "reputation": 33,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 43
+  },
+  {
+    "id": "crew_4",
+    "name": "Adnan Rahman",
+    "fictional": true,
+    "profession": "Composer",
+    "age": 24,
+    "tier": 5,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      5,
+      12
+    ],
+    "reputation": 34,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 44
+  },
+  {
+    "id": "crew_5",
+    "name": "Samir Karim",
+    "fictional": true,
+    "profession": "Singer",
+    "age": 25,
+    "tier": 1,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      6,
+      13
+    ],
+    "reputation": 35,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 45
+  },
+  {
+    "id": "crew_6",
+    "name": "Rohan Kabir",
+    "fictional": true,
+    "profession": "Lyricist",
+    "age": 26,
+    "tier": 2,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      7,
+      14
+    ],
+    "reputation": 36,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 46
+  },
+  {
+    "id": "crew_7",
+    "name": "Mira Khan",
+    "fictional": true,
+    "profession": "Costume",
+    "age": 27,
+    "tier": 3,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      1,
+      15
+    ],
+    "reputation": 37,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 47
+  },
+  {
+    "id": "crew_8",
+    "name": "Nadia Bose",
+    "fictional": true,
+    "profession": "Makeup",
+    "age": 28,
+    "tier": 4,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      2,
+      16
+    ],
+    "reputation": 38,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 48
+  },
+  {
+    "id": "crew_9",
+    "name": "Farah Rahman",
+    "fictional": true,
+    "profession": "VFX",
+    "age": 29,
+    "tier": 5,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      3,
+      17
+    ],
+    "reputation": 39,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 49
+  },
+  {
+    "id": "crew_10",
+    "name": "Tisha Karim",
+    "fictional": true,
+    "profession": "Sound",
+    "age": 30,
+    "tier": 1,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      4,
+      18
+    ],
+    "reputation": 40,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 50
+  },
+  {
+    "id": "crew_11",
+    "name": "Raisa Kabir",
+    "fictional": true,
+    "profession": "Stunts",
+    "age": 31,
+    "tier": 2,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      5,
+      19
+    ],
+    "reputation": 41,
+    "availability": 0.9500000000000001,
+    "quirks": "Method performer",
+    "skill": 51
+  },
+  {
+    "id": "crew_12",
+    "name": "Asha Khan",
+    "fictional": true,
+    "profession": "Writer",
+    "age": 32,
+    "tier": 3,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      6,
+      8
+    ],
+    "reputation": 42,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 52
+  },
+  {
+    "id": "crew_13",
+    "name": "Nila Bose",
+    "fictional": true,
+    "profession": "DOP",
+    "age": 33,
+    "tier": 4,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      7,
+      9
+    ],
+    "reputation": 43,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 53
+  },
+  {
+    "id": "crew_14",
+    "name": "Sadia Rahman",
+    "fictional": true,
+    "profession": "Editor",
+    "age": 34,
+    "tier": 5,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      1,
+      10
+    ],
+    "reputation": 44,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 54
+  },
+  {
+    "id": "crew_15",
+    "name": "Rumi Karim",
+    "fictional": true,
+    "profession": "Art director",
+    "age": 35,
+    "tier": 1,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      2,
+      11
+    ],
+    "reputation": 45,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 55
+  },
+  {
+    "id": "crew_16",
+    "name": "Anika Kabir",
+    "fictional": true,
+    "profession": "Composer",
+    "age": 36,
+    "tier": 2,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      3,
+      12
+    ],
+    "reputation": 46,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 56
+  },
+  {
+    "id": "crew_17",
+    "name": "Arian Khan",
+    "fictional": true,
+    "profession": "Singer",
+    "age": 37,
+    "tier": 3,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      4,
+      13
+    ],
+    "reputation": 47,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 57
+  },
+  {
+    "id": "crew_18",
+    "name": "Nabil Bose",
+    "fictional": true,
+    "profession": "Lyricist",
+    "age": 38,
+    "tier": 4,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      5,
+      14
+    ],
+    "reputation": 48,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 58
+  },
+  {
+    "id": "crew_19",
+    "name": "Farhan Rahman",
+    "fictional": true,
+    "profession": "Costume",
+    "age": 39,
+    "tier": 5,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      6,
+      15
+    ],
+    "reputation": 49,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 59
+  },
+  {
+    "id": "crew_20",
+    "name": "Rafi Haque",
+    "fictional": true,
+    "profession": "Makeup",
+    "age": 40,
+    "tier": 1,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      7,
+      16
+    ],
+    "reputation": 50,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 60
+  },
+  {
+    "id": "crew_21",
+    "name": "Imran Sen",
+    "fictional": true,
+    "profession": "VFX",
+    "age": 41,
+    "tier": 2,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      1,
+      17
+    ],
+    "reputation": 51,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 61
+  },
+  {
+    "id": "crew_22",
+    "name": "Tariq Alam",
+    "fictional": true,
+    "profession": "Sound",
+    "age": 42,
+    "tier": 3,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      2,
+      18
+    ],
+    "reputation": 52,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 62
+  },
+  {
+    "id": "crew_23",
+    "name": "Hasan Akter",
+    "fictional": true,
+    "profession": "Stunts",
+    "age": 43,
+    "tier": 4,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      3,
+      19
+    ],
+    "reputation": 53,
+    "availability": 0.9500000000000001,
+    "quirks": "Method performer",
+    "skill": 63
+  },
+  {
+    "id": "crew_24",
+    "name": "Adnan Chowdhury",
+    "fictional": true,
+    "profession": "Writer",
+    "age": 44,
+    "tier": 5,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      4,
+      8
+    ],
+    "reputation": 54,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 64
+  },
+  {
+    "id": "crew_25",
+    "name": "Samir Haque",
+    "fictional": true,
+    "profession": "DOP",
+    "age": 45,
+    "tier": 1,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      5,
+      9
+    ],
+    "reputation": 55,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 65
+  },
+  {
+    "id": "crew_26",
+    "name": "Rohan Sen",
+    "fictional": true,
+    "profession": "Editor",
+    "age": 46,
+    "tier": 2,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      6,
+      10
+    ],
+    "reputation": 56,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 66
+  },
+  {
+    "id": "crew_27",
+    "name": "Mira Alam",
+    "fictional": true,
+    "profession": "Art director",
+    "age": 47,
+    "tier": 3,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      7,
+      11
+    ],
+    "reputation": 57,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 67
+  },
+  {
+    "id": "crew_28",
+    "name": "Nadia Akter",
+    "fictional": true,
+    "profession": "Composer",
+    "age": 48,
+    "tier": 4,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      1,
+      12
+    ],
+    "reputation": 58,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 68
+  },
+  {
+    "id": "crew_29",
+    "name": "Farah Chowdhury",
+    "fictional": true,
+    "profession": "Singer",
+    "age": 49,
+    "tier": 5,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      2,
+      13
+    ],
+    "reputation": 59,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 69
+  },
+  {
+    "id": "crew_30",
+    "name": "Tisha Haque",
+    "fictional": true,
+    "profession": "Lyricist",
+    "age": 50,
+    "tier": 1,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      3,
+      14
+    ],
+    "reputation": 60,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 70
+  },
+  {
+    "id": "crew_31",
+    "name": "Raisa Sen",
+    "fictional": true,
+    "profession": "Costume",
+    "age": 51,
+    "tier": 2,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      4,
+      15
+    ],
+    "reputation": 61,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 71
+  },
+  {
+    "id": "crew_32",
+    "name": "Asha Alam",
+    "fictional": true,
+    "profession": "Makeup",
+    "age": 52,
+    "tier": 3,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      5,
+      16
+    ],
+    "reputation": 62,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 72
+  },
+  {
+    "id": "crew_33",
+    "name": "Nila Akter",
+    "fictional": true,
+    "profession": "VFX",
+    "age": 53,
+    "tier": 4,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      6,
+      17
+    ],
+    "reputation": 63,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 73
+  },
+  {
+    "id": "crew_34",
+    "name": "Sadia Chowdhury",
+    "fictional": true,
+    "profession": "Sound",
+    "age": 54,
+    "tier": 5,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      7,
+      18
+    ],
+    "reputation": 64,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 74
+  },
+  {
+    "id": "crew_35",
+    "name": "Rumi Haque",
+    "fictional": true,
+    "profession": "Stunts",
+    "age": 55,
+    "tier": 1,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      1,
+      19
+    ],
+    "reputation": 65,
+    "availability": 0.9500000000000001,
+    "quirks": "Method performer",
+    "skill": 75
+  },
+  {
+    "id": "crew_36",
+    "name": "Anika Sen",
+    "fictional": true,
+    "profession": "Writer",
+    "age": 56,
+    "tier": 2,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      2,
+      8
+    ],
+    "reputation": 66,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 76
+  },
+  {
+    "id": "crew_37",
+    "name": "Arian Alam",
+    "fictional": true,
+    "profession": "DOP",
+    "age": 57,
+    "tier": 3,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      3,
+      9
+    ],
+    "reputation": 67,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 77
+  },
+  {
+    "id": "crew_38",
+    "name": "Nabil Akter",
+    "fictional": true,
+    "profession": "Editor",
+    "age": 58,
+    "tier": 4,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      4,
+      10
+    ],
+    "reputation": 68,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 78
+  },
+  {
+    "id": "crew_39",
+    "name": "Farhan Chowdhury",
+    "fictional": true,
+    "profession": "Art director",
+    "age": 20,
+    "tier": 5,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      5,
+      11
+    ],
+    "reputation": 69,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 79
+  },
+  {
+    "id": "crew_40",
+    "name": "Rafi Islam",
+    "fictional": true,
+    "profession": "Composer",
+    "age": 21,
+    "tier": 1,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      6,
+      12
+    ],
+    "reputation": 70,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 80
+  },
+  {
+    "id": "crew_41",
+    "name": "Imran Das",
+    "fictional": true,
+    "profession": "Singer",
+    "age": 22,
+    "tier": 2,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      7,
+      13
+    ],
+    "reputation": 71,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 81
+  },
+  {
+    "id": "crew_42",
+    "name": "Tariq Sarker",
+    "fictional": true,
+    "profession": "Lyricist",
+    "age": 23,
+    "tier": 3,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      1,
+      14
+    ],
+    "reputation": 72,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 82
+  },
+  {
+    "id": "crew_43",
+    "name": "Hasan Begum",
+    "fictional": true,
+    "profession": "Costume",
+    "age": 24,
+    "tier": 4,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      2,
+      15
+    ],
+    "reputation": 73,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 83
+  },
+  {
+    "id": "crew_44",
+    "name": "Adnan Ahmed",
+    "fictional": true,
+    "profession": "Makeup",
+    "age": 25,
+    "tier": 5,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      3,
+      16
+    ],
+    "reputation": 74,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 84
+  },
+  {
+    "id": "crew_45",
+    "name": "Samir Islam",
+    "fictional": true,
+    "profession": "VFX",
+    "age": 26,
+    "tier": 1,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      4,
+      17
+    ],
+    "reputation": 75,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 85
+  },
+  {
+    "id": "crew_46",
+    "name": "Rohan Das",
+    "fictional": true,
+    "profession": "Sound",
+    "age": 27,
+    "tier": 2,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      5,
+      18
+    ],
+    "reputation": 76,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 86
+  },
+  {
+    "id": "crew_47",
+    "name": "Mira Sarker",
+    "fictional": true,
+    "profession": "Stunts",
+    "age": 28,
+    "tier": 3,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      6,
+      19
+    ],
+    "reputation": 77,
+    "availability": 0.9500000000000001,
+    "quirks": "Method performer",
+    "skill": 87
+  },
+  {
+    "id": "crew_48",
+    "name": "Nadia Begum",
+    "fictional": true,
+    "profession": "Writer",
+    "age": 29,
+    "tier": 4,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      7,
+      8
+    ],
+    "reputation": 78,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 88
+  },
+  {
+    "id": "crew_49",
+    "name": "Farah Ahmed",
+    "fictional": true,
+    "profession": "DOP",
+    "age": 30,
+    "tier": 5,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      1,
+      9
+    ],
+    "reputation": 79,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 89
+  },
+  {
+    "id": "crew_50",
+    "name": "Tisha Islam",
+    "fictional": true,
+    "profession": "Editor",
+    "age": 31,
+    "tier": 1,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      2,
+      10
+    ],
+    "reputation": 80,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 90
+  },
+  {
+    "id": "crew_51",
+    "name": "Raisa Das",
+    "fictional": true,
+    "profession": "Art director",
+    "age": 32,
+    "tier": 2,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      3,
+      11
+    ],
+    "reputation": 81,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 91
+  },
+  {
+    "id": "crew_52",
+    "name": "Asha Sarker",
+    "fictional": true,
+    "profession": "Composer",
+    "age": 33,
+    "tier": 3,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      4,
+      12
+    ],
+    "reputation": 82,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 92
+  },
+  {
+    "id": "crew_53",
+    "name": "Nila Begum",
+    "fictional": true,
+    "profession": "Singer",
+    "age": 34,
+    "tier": 4,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      5,
+      13
+    ],
+    "reputation": 83,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 93
+  },
+  {
+    "id": "crew_54",
+    "name": "Sadia Ahmed",
+    "fictional": true,
+    "profession": "Lyricist",
+    "age": 35,
+    "tier": 5,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      6,
+      14
+    ],
+    "reputation": 84,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 94
+  },
+  {
+    "id": "crew_55",
+    "name": "Rumi Islam",
+    "fictional": true,
+    "profession": "Costume",
+    "age": 36,
+    "tier": 1,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      7,
+      15
+    ],
+    "reputation": 85,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 40
+  },
+  {
+    "id": "crew_56",
+    "name": "Anika Das",
+    "fictional": true,
+    "profession": "Makeup",
+    "age": 37,
+    "tier": 2,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      1,
+      16
+    ],
+    "reputation": 86,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 41
+  },
+  {
+    "id": "crew_57",
+    "name": "Arian Sarker",
+    "fictional": true,
+    "profession": "VFX",
+    "age": 38,
+    "tier": 3,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      2,
+      17
+    ],
+    "reputation": 87,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 42
+  },
+  {
+    "id": "crew_58",
+    "name": "Nabil Begum",
+    "fictional": true,
+    "profession": "Sound",
+    "age": 39,
+    "tier": 4,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      3,
+      18
+    ],
+    "reputation": 88,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 43
+  },
+  {
+    "id": "crew_59",
+    "name": "Farhan Ahmed",
+    "fictional": true,
+    "profession": "Stunts",
+    "age": 40,
+    "tier": 5,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      4,
+      19
+    ],
+    "reputation": 89,
+    "availability": 0.9500000000000001,
+    "quirks": "Method performer",
+    "skill": 44
+  },
+  {
+    "id": "crew_60",
+    "name": "Rafi Kabir",
+    "fictional": true,
+    "profession": "Writer",
+    "age": 41,
+    "tier": 1,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      5,
+      8
+    ],
+    "reputation": 30,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 45
+  },
+  {
+    "id": "crew_61",
+    "name": "Imran Khan",
+    "fictional": true,
+    "profession": "DOP",
+    "age": 42,
+    "tier": 2,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      6,
+      9
+    ],
+    "reputation": 31,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 46
+  },
+  {
+    "id": "crew_62",
+    "name": "Tariq Bose",
+    "fictional": true,
+    "profession": "Editor",
+    "age": 43,
+    "tier": 3,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      7,
+      10
+    ],
+    "reputation": 32,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 47
+  },
+  {
+    "id": "crew_63",
+    "name": "Hasan Rahman",
+    "fictional": true,
+    "profession": "Art director",
+    "age": 44,
+    "tier": 4,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      1,
+      11
+    ],
+    "reputation": 33,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 48
+  },
+  {
+    "id": "crew_64",
+    "name": "Adnan Karim",
+    "fictional": true,
+    "profession": "Composer",
+    "age": 45,
+    "tier": 5,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      2,
+      12
+    ],
+    "reputation": 34,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 49
+  },
+  {
+    "id": "crew_65",
+    "name": "Samir Kabir",
+    "fictional": true,
+    "profession": "Singer",
+    "age": 46,
+    "tier": 1,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      3,
+      13
+    ],
+    "reputation": 35,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 50
+  },
+  {
+    "id": "crew_66",
+    "name": "Rohan Khan",
+    "fictional": true,
+    "profession": "Lyricist",
+    "age": 47,
+    "tier": 2,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      4,
+      14
+    ],
+    "reputation": 36,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 51
+  },
+  {
+    "id": "crew_67",
+    "name": "Mira Bose",
+    "fictional": true,
+    "profession": "Costume",
+    "age": 48,
+    "tier": 3,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      5,
+      15
+    ],
+    "reputation": 37,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 52
+  },
+  {
+    "id": "crew_68",
+    "name": "Nadia Rahman",
+    "fictional": true,
+    "profession": "Makeup",
+    "age": 49,
+    "tier": 4,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      6,
+      16
+    ],
+    "reputation": 38,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 53
+  },
+  {
+    "id": "crew_69",
+    "name": "Farah Karim",
+    "fictional": true,
+    "profession": "VFX",
+    "age": 50,
+    "tier": 5,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      7,
+      17
+    ],
+    "reputation": 39,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 54
+  },
+  {
+    "id": "crew_70",
+    "name": "Tisha Kabir",
+    "fictional": true,
+    "profession": "Sound",
+    "age": 51,
+    "tier": 1,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      1,
+      18
+    ],
+    "reputation": 40,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 55
+  },
+  {
+    "id": "crew_71",
+    "name": "Raisa Khan",
+    "fictional": true,
+    "profession": "Stunts",
+    "age": 52,
+    "tier": 2,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      2,
+      19
+    ],
+    "reputation": 41,
+    "availability": 0.9500000000000001,
+    "quirks": "Method performer",
+    "skill": 56
+  }
+]

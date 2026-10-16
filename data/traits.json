@@ -1,0 +1,82 @@
+[
+  {
+    "id": "trait_0",
+    "name": "Perfectionist",
+    "stat": "Vision",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.2
+  },
+  {
+    "id": "trait_1",
+    "name": "Hustler",
+    "stat": "Script",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.0
+  },
+  {
+    "id": "trait_2",
+    "name": "Visionary",
+    "stat": "Direction",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.0
+  },
+  {
+    "id": "trait_3",
+    "name": "Diplomat",
+    "stat": "Leadership",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.0
+  },
+  {
+    "id": "trait_4",
+    "name": "Risk-taker",
+    "stat": "Business",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.0
+  },
+  {
+    "id": "trait_5",
+    "name": "Frugal",
+    "stat": "Network",
+    "bonus": 8,
+    "cost_factor": 0.9,
+    "stress_factor": 1.0
+  },
+  {
+    "id": "trait_6",
+    "name": "Charismatic",
+    "stat": "Charm",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.0
+  },
+  {
+    "id": "trait_7",
+    "name": "Stubborn",
+    "stat": "Stamina",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.0
+  },
+  {
+    "id": "trait_8",
+    "name": "Patient",
+    "stat": "Marketing",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.0
+  },
+  {
+    "id": "trait_9",
+    "name": "Resilient",
+    "stat": "Vision",
+    "bonus": 8,
+    "cost_factor": 1.0,
+    "stress_factor": 1.0
+  }
+]

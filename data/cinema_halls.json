@@ -1,0 +1,362 @@
+[
+  {
+    "id": "hall_0",
+    "name": "Dhaka Cineplex 1",
+    "district": "Dhaka",
+    "multiplex": true,
+    "seats": 120,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_1",
+    "name": "Chattogram Picture House 1",
+    "district": "Chattogram",
+    "multiplex": false,
+    "seats": 165,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_2",
+    "name": "Sylhet Picture House 1",
+    "district": "Sylhet",
+    "multiplex": false,
+    "seats": 210,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_3",
+    "name": "Rajshahi Picture House 1",
+    "district": "Rajshahi",
+    "multiplex": false,
+    "seats": 255,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_4",
+    "name": "Khulna Cineplex 1",
+    "district": "Khulna",
+    "multiplex": true,
+    "seats": 300,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_5",
+    "name": "Barishal Picture House 1",
+    "district": "Barishal",
+    "multiplex": false,
+    "seats": 345,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_6",
+    "name": "Rangpur Picture House 1",
+    "district": "Rangpur",
+    "multiplex": false,
+    "seats": 390,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_7",
+    "name": "Mymensingh Picture House 1",
+    "district": "Mymensingh",
+    "multiplex": false,
+    "seats": 120,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_8",
+    "name": "Cumilla Cineplex 1",
+    "district": "Cumilla",
+    "multiplex": true,
+    "seats": 165,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_9",
+    "name": "Cox’s Bazar Picture House 1",
+    "district": "Cox’s Bazar",
+    "multiplex": false,
+    "seats": 210,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_10",
+    "name": "Tangail Picture House 1",
+    "district": "Tangail",
+    "multiplex": false,
+    "seats": 255,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_11",
+    "name": "Kushtia Picture House 1",
+    "district": "Kushtia",
+    "multiplex": false,
+    "seats": 300,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_12",
+    "name": "Dhaka Cineplex 2",
+    "district": "Dhaka",
+    "multiplex": true,
+    "seats": 345,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_13",
+    "name": "Chattogram Picture House 2",
+    "district": "Chattogram",
+    "multiplex": false,
+    "seats": 390,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_14",
+    "name": "Sylhet Picture House 2",
+    "district": "Sylhet",
+    "multiplex": false,
+    "seats": 120,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_15",
+    "name": "Rajshahi Picture House 2",
+    "district": "Rajshahi",
+    "multiplex": false,
+    "seats": 165,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_16",
+    "name": "Khulna Cineplex 2",
+    "district": "Khulna",
+    "multiplex": true,
+    "seats": 210,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_17",
+    "name": "Barishal Picture House 2",
+    "district": "Barishal",
+    "multiplex": false,
+    "seats": 255,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_18",
+    "name": "Rangpur Picture House 2",
+    "district": "Rangpur",
+    "multiplex": false,
+    "seats": 300,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_19",
+    "name": "Mymensingh Picture House 2",
+    "district": "Mymensingh",
+    "multiplex": false,
+    "seats": 345,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_20",
+    "name": "Cumilla Cineplex 2",
+    "district": "Cumilla",
+    "multiplex": true,
+    "seats": 390,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_21",
+    "name": "Cox’s Bazar Picture House 2",
+    "district": "Cox’s Bazar",
+    "multiplex": false,
+    "seats": 120,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_22",
+    "name": "Tangail Picture House 2",
+    "district": "Tangail",
+    "multiplex": false,
+    "seats": 165,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_23",
+    "name": "Kushtia Picture House 2",
+    "district": "Kushtia",
+    "multiplex": false,
+    "seats": 210,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_24",
+    "name": "Dhaka Cineplex 3",
+    "district": "Dhaka",
+    "multiplex": true,
+    "seats": 255,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_25",
+    "name": "Chattogram Picture House 3",
+    "district": "Chattogram",
+    "multiplex": false,
+    "seats": 300,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_26",
+    "name": "Sylhet Picture House 3",
+    "district": "Sylhet",
+    "multiplex": false,
+    "seats": 345,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_27",
+    "name": "Rajshahi Picture House 3",
+    "district": "Rajshahi",
+    "multiplex": false,
+    "seats": 390,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_28",
+    "name": "Khulna Cineplex 3",
+    "district": "Khulna",
+    "multiplex": true,
+    "seats": 120,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_29",
+    "name": "Barishal Picture House 3",
+    "district": "Barishal",
+    "multiplex": false,
+    "seats": 165,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_30",
+    "name": "Rangpur Picture House 3",
+    "district": "Rangpur",
+    "multiplex": false,
+    "seats": 210,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_31",
+    "name": "Mymensingh Picture House 3",
+    "district": "Mymensingh",
+    "multiplex": false,
+    "seats": 255,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_32",
+    "name": "Cumilla Cineplex 3",
+    "district": "Cumilla",
+    "multiplex": true,
+    "seats": 300,
+    "ticket": 350,
+    "producer_share": 0.31,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_33",
+    "name": "Cox’s Bazar Picture House 3",
+    "district": "Cox’s Bazar",
+    "multiplex": false,
+    "seats": 345,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_34",
+    "name": "Tangail Picture House 3",
+    "district": "Tangail",
+    "multiplex": false,
+    "seats": 390,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  },
+  {
+    "id": "hall_35",
+    "name": "Kushtia Picture House 3",
+    "district": "Kushtia",
+    "multiplex": false,
+    "seats": 120,
+    "ticket": 150,
+    "producer_share": 0.2,
+    "advance": 2.0
+  }
+]

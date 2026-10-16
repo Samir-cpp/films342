@@ -1,0 +1,362 @@
+[
+  {
+    "id": "bench_0",
+    "name": "Fictional calibration 01",
+    "fictional": true,
+    "budget": 60,
+    "gross": 21.0,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_1",
+    "name": "Fictional calibration 02",
+    "fictional": true,
+    "budget": 78,
+    "gross": 78.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_2",
+    "name": "Fictional calibration 03",
+    "fictional": true,
+    "budget": 96,
+    "gross": 158.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_3",
+    "name": "Fictional calibration 04",
+    "fictional": true,
+    "budget": 114,
+    "gross": 262.2,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_4",
+    "name": "Fictional calibration 05",
+    "fictional": true,
+    "budget": 132,
+    "gross": 389.4,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_5",
+    "name": "Fictional calibration 06",
+    "fictional": true,
+    "budget": 150,
+    "gross": 540.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_6",
+    "name": "Fictional calibration 07",
+    "fictional": true,
+    "budget": 168,
+    "gross": 714.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_7",
+    "name": "Fictional calibration 08",
+    "fictional": true,
+    "budget": 186,
+    "gross": 911.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_8",
+    "name": "Fictional calibration 09",
+    "fictional": true,
+    "budget": 204,
+    "gross": 1132.2,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_9",
+    "name": "Fictional calibration 10",
+    "fictional": true,
+    "budget": 222,
+    "gross": 1376.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_10",
+    "name": "Fictional calibration 11",
+    "fictional": true,
+    "budget": 240,
+    "gross": 84.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_11",
+    "name": "Fictional calibration 12",
+    "fictional": true,
+    "budget": 258,
+    "gross": 258.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_12",
+    "name": "Fictional calibration 13",
+    "fictional": true,
+    "budget": 276,
+    "gross": 455.4,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_13",
+    "name": "Fictional calibration 14",
+    "fictional": true,
+    "budget": 294,
+    "gross": 676.2,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_14",
+    "name": "Fictional calibration 15",
+    "fictional": true,
+    "budget": 312,
+    "gross": 920.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_15",
+    "name": "Fictional calibration 16",
+    "fictional": true,
+    "budget": 330,
+    "gross": 1188.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_16",
+    "name": "Fictional calibration 17",
+    "fictional": true,
+    "budget": 348,
+    "gross": 1479.0,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_17",
+    "name": "Fictional calibration 18",
+    "fictional": true,
+    "budget": 366,
+    "gross": 1793.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_18",
+    "name": "Fictional calibration 19",
+    "fictional": true,
+    "budget": 384,
+    "gross": 2131.2,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_19",
+    "name": "Fictional calibration 20",
+    "fictional": true,
+    "budget": 402,
+    "gross": 2492.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_20",
+    "name": "Fictional calibration 21",
+    "fictional": true,
+    "budget": 420,
+    "gross": 147.0,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_21",
+    "name": "Fictional calibration 22",
+    "fictional": true,
+    "budget": 438,
+    "gross": 438.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_22",
+    "name": "Fictional calibration 23",
+    "fictional": true,
+    "budget": 456,
+    "gross": 752.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_23",
+    "name": "Fictional calibration 24",
+    "fictional": true,
+    "budget": 474,
+    "gross": 1090.2,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_24",
+    "name": "Fictional calibration 25",
+    "fictional": true,
+    "budget": 492,
+    "gross": 1451.4,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_25",
+    "name": "Fictional calibration 26",
+    "fictional": true,
+    "budget": 510,
+    "gross": 1836.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_26",
+    "name": "Fictional calibration 27",
+    "fictional": true,
+    "budget": 528,
+    "gross": 2244.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_27",
+    "name": "Fictional calibration 28",
+    "fictional": true,
+    "budget": 546,
+    "gross": 2675.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_28",
+    "name": "Fictional calibration 29",
+    "fictional": true,
+    "budget": 564,
+    "gross": 3130.2,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_29",
+    "name": "Fictional calibration 30",
+    "fictional": true,
+    "budget": 582,
+    "gross": 3608.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_30",
+    "name": "Fictional calibration 31",
+    "fictional": true,
+    "budget": 600,
+    "gross": 210.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_31",
+    "name": "Fictional calibration 32",
+    "fictional": true,
+    "budget": 618,
+    "gross": 618.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_32",
+    "name": "Fictional calibration 33",
+    "fictional": true,
+    "budget": 636,
+    "gross": 1049.4,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_33",
+    "name": "Fictional calibration 34",
+    "fictional": true,
+    "budget": 654,
+    "gross": 1504.2,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_34",
+    "name": "Fictional calibration 35",
+    "fictional": true,
+    "budget": 672,
+    "gross": 1982.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_35",
+    "name": "Fictional calibration 36",
+    "fictional": true,
+    "budget": 690,
+    "gross": 2484.0,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_36",
+    "name": "Fictional calibration 37",
+    "fictional": true,
+    "budget": 708,
+    "gross": 3009.0,
+    "release_window": "Eid",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_37",
+    "name": "Fictional calibration 38",
+    "fictional": true,
+    "budget": 726,
+    "gross": 3557.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_38",
+    "name": "Fictional calibration 39",
+    "fictional": true,
+    "budget": 744,
+    "gross": 4129.2,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  },
+  {
+    "id": "bench_39",
+    "name": "Fictional calibration 40",
+    "fictional": true,
+    "budget": 762,
+    "gross": 4724.4,
+    "release_window": "Regular",
+    "note": "Synthetic balancing scenario, not a historical film or verified financial report."
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "loc_0",
+    "name": "Old Dhaka lanes",
+    "cost": 1,
+    "permit": 1,
+    "risk": 0.05
+  },
+  {
+    "id": "loc_1",
+    "name": "Sadarghat",
+    "cost": 2,
+    "permit": 2,
+    "risk": 0.060000000000000005
+  },
+  {
+    "id": "loc_2",
+    "name": "Padma village",
+    "cost": 3,
+    "permit": 3,
+    "risk": 0.07
+  },
+  {
+    "id": "loc_3",
+    "name": "FDC sets",
+    "cost": 4,
+    "permit": 1,
+    "risk": 0.08
+  },
+  {
+    "id": "loc_4",
+    "name": "Cox’s Bazar beach",
+    "cost": 1,
+    "permit": 2,
+    "risk": 0.09
+  },
+  {
+    "id": "loc_5",
+    "name": "Sylhet tea gardens",
+    "cost": 2,
+    "permit": 3,
+    "risk": 0.1
+  },
+  {
+    "id": "loc_6",
+    "name": "Sundarbans edge",
+    "cost": 3,
+    "permit": 1,
+    "risk": 0.11
+  },
+  {
+    "id": "loc_7",
+    "name": "Mumbai Film City",
+    "cost": 4,
+    "permit": 2,
+    "risk": 0.12000000000000001
+  },
+  {
+    "id": "loc_8",
+    "name": "Rajshahi riverside",
+    "cost": 1,
+    "permit": 3,
+    "risk": 0.13
+  },
+  {
+    "id": "loc_9",
+    "name": "Chattogram port",
+    "cost": 2,
+    "permit": 1,
+    "risk": 0.14
+  },
+  {
+    "id": "loc_10",
+    "name": "Kushtia courtyard",
+    "cost": 3,
+    "permit": 2,
+    "risk": 0.15000000000000002
+  },
+  {
+    "id": "loc_11",
+    "name": "Dhaka rooftop",
+    "cost": 4,
+    "permit": 3,
+    "risk": 0.16
+  }
+]

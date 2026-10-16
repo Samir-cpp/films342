@@ -1,0 +1,101 @@
+{
+  "themes": [
+    "Belonging",
+    "Justice",
+    "Ambition",
+    "Family",
+    "Memory",
+    "Love"
+  ],
+  "tones": [
+    "Hopeful",
+    "Gritty",
+    "Playful",
+    "Melancholic"
+  ],
+  "eras": [
+    "Present day",
+    "1990s",
+    "1971",
+    "Near future"
+  ],
+  "ratings": [
+    "U",
+    "12+",
+    "18+"
+  ],
+  "sources": [
+    "Original screenplay",
+    "Buy a script",
+    "Book adaptation",
+    "Remake",
+    "Sequel",
+    "Reboot"
+  ],
+  "stages": [
+    "development",
+    "financing",
+    "packaging",
+    "preproduction",
+    "production",
+    "post",
+    "marketing",
+    "distribution",
+    "release",
+    "complete"
+  ],
+  "stage_labels": [
+    "Development",
+    "Financing",
+    "Cast & crew",
+    "Pre-production",
+    "Production",
+    "Post & censor",
+    "Marketing",
+    "Distribution",
+    "In cinemas",
+    "Completed"
+  ],
+  "stage_weeks": [
+    3,
+    1,
+    1,
+    2,
+    4,
+    3,
+    2,
+    1,
+    8,
+    0
+  ],
+  "rival_titles": [
+    "River of Light",
+    "Midnight Dhaka",
+    "Last Ferry",
+    "Paper Kingdom",
+    "A Monsoon Letter",
+    "Blue Rickshaw",
+    "The Other Shore",
+    "City of Songs"
+  ],
+  "tips": [
+    "Write your own story, then advance development with Next week.",
+    "Pitch a backer or self-finance. A rejection is a chance to revise.",
+    "Cast and crew fees count against your production budget.",
+    "Let the schedule complete, then begin shooting.",
+    "Protect your stamina: rushing costs quality and increases stress.",
+    "Review rating cuts before releasing your final edit.",
+    "Hype helps opening weekend; quality sustains later weeks.",
+    "Choose screens, a release window and rights deals carefully.",
+    "Producer receipts differ from headline box-office gross.",
+    "Campaign for awards, license your catalog or begin a sequel."
+  ],
+  "credits": [
+    "Design, code and procedural artwork: THE DIRECTOR project",
+    "All characters and calibration films are fictional. Financial values are estimates.",
+    "Noto Sans Bengali — SIL Open Font License 1.1",
+    "Godot Engine — MIT License",
+    "GUT by bitwes — MIT License",
+    "Procedural music and sounds created for this project. No external stock art."
+  ]
+}

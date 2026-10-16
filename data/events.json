@@ -1,0 +1,4052 @@
+[
+  {
+    "id": "event_0",
+    "name": "Monsoon delay · 01",
+    "description": "Rain threatens the schedule. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_1",
+    "name": "Late arrival · 01",
+    "description": "A performer misses the call time. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_2",
+    "name": "Leaked footage · 01",
+    "description": "Unfinished footage circulates online. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_3",
+    "name": "Creative disagreement · 01",
+    "description": "The team wants a different ending. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_4",
+    "name": "Investor hesitation · 01",
+    "description": "Your backer requests a revised forecast. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_5",
+    "name": "Festival invitation · 01",
+    "description": "A curator asks for a work in progress. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_6",
+    "name": "Viral conversation · 01",
+    "description": "A scene sparks an online discussion. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_7",
+    "name": "Safety concern · 01",
+    "description": "A difficult setup needs extra care. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_8",
+    "name": "Permit question · 01",
+    "description": "A location official requests documents. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_9",
+    "name": "Rival announcement · 01",
+    "description": "Another film targets your release window. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_10",
+    "name": "A mentor calls · 01",
+    "description": "An experienced filmmaker offers advice. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_11",
+    "name": "Unexpected repair · 01",
+    "description": "A piece of equipment needs servicing. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_12",
+    "name": "Press interview · 01",
+    "description": "A journalist requests a conversation. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_13",
+    "name": "Fresh idea · 01",
+    "description": "A junior colleague suggests a scene. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_14",
+    "name": "Music opportunity · 01",
+    "description": "A song is attracting early attention. The river unit has only a morning access window.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_15",
+    "name": "Monsoon delay · 02",
+    "description": "Rain threatens the schedule. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_16",
+    "name": "Late arrival · 02",
+    "description": "A performer misses the call time. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_17",
+    "name": "Leaked footage · 02",
+    "description": "Unfinished footage circulates online. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_18",
+    "name": "Creative disagreement · 02",
+    "description": "The team wants a different ending. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_19",
+    "name": "Investor hesitation · 02",
+    "description": "Your backer requests a revised forecast. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_20",
+    "name": "Festival invitation · 02",
+    "description": "A curator asks for a work in progress. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_21",
+    "name": "Viral conversation · 02",
+    "description": "A scene sparks an online discussion. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_22",
+    "name": "Safety concern · 02",
+    "description": "A difficult setup needs extra care. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_23",
+    "name": "Permit question · 02",
+    "description": "A location official requests documents. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_24",
+    "name": "Rival announcement · 02",
+    "description": "Another film targets your release window. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_25",
+    "name": "A mentor calls · 02",
+    "description": "An experienced filmmaker offers advice. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_26",
+    "name": "Unexpected repair · 02",
+    "description": "A piece of equipment needs servicing. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_27",
+    "name": "Press interview · 02",
+    "description": "A journalist requests a conversation. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_28",
+    "name": "Fresh idea · 02",
+    "description": "A junior colleague suggests a scene. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_29",
+    "name": "Music opportunity · 02",
+    "description": "A song is attracting early attention. Your lead performer has a second booking next week.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_30",
+    "name": "Monsoon delay · 03",
+    "description": "Rain threatens the schedule. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_31",
+    "name": "Late arrival · 03",
+    "description": "A performer misses the call time. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_32",
+    "name": "Leaked footage · 03",
+    "description": "Unfinished footage circulates online. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_33",
+    "name": "Creative disagreement · 03",
+    "description": "The team wants a different ending. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_34",
+    "name": "Investor hesitation · 03",
+    "description": "Your backer requests a revised forecast. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_35",
+    "name": "Festival invitation · 03",
+    "description": "A curator asks for a work in progress. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_36",
+    "name": "Viral conversation · 03",
+    "description": "A scene sparks an online discussion. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_37",
+    "name": "Safety concern · 03",
+    "description": "A difficult setup needs extra care. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_38",
+    "name": "Permit question · 03",
+    "description": "A location official requests documents. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_39",
+    "name": "Rival announcement · 03",
+    "description": "Another film targets your release window. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_40",
+    "name": "A mentor calls · 03",
+    "description": "An experienced filmmaker offers advice. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_41",
+    "name": "Unexpected repair · 03",
+    "description": "A piece of equipment needs servicing. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_42",
+    "name": "Press interview · 03",
+    "description": "A journalist requests a conversation. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_43",
+    "name": "Fresh idea · 03",
+    "description": "A junior colleague suggests a scene. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_44",
+    "name": "Music opportunity · 03",
+    "description": "A song is attracting early attention. A new collaborator is making their feature debut.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_45",
+    "name": "Monsoon delay · 04",
+    "description": "Rain threatens the schedule. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_46",
+    "name": "Late arrival · 04",
+    "description": "A performer misses the call time. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_47",
+    "name": "Leaked footage · 04",
+    "description": "Unfinished footage circulates online. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_48",
+    "name": "Creative disagreement · 04",
+    "description": "The team wants a different ending. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_49",
+    "name": "Investor hesitation · 04",
+    "description": "Your backer requests a revised forecast. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_50",
+    "name": "Festival invitation · 04",
+    "description": "A curator asks for a work in progress. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_51",
+    "name": "Viral conversation · 04",
+    "description": "A scene sparks an online discussion. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_52",
+    "name": "Safety concern · 04",
+    "description": "A difficult setup needs extra care. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_53",
+    "name": "Permit question · 04",
+    "description": "A location official requests documents. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_54",
+    "name": "Rival announcement · 04",
+    "description": "Another film targets your release window. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_55",
+    "name": "A mentor calls · 04",
+    "description": "An experienced filmmaker offers advice. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_56",
+    "name": "Unexpected repair · 04",
+    "description": "A piece of equipment needs servicing. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_57",
+    "name": "Press interview · 04",
+    "description": "A journalist requests a conversation. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_58",
+    "name": "Fresh idea · 04",
+    "description": "A junior colleague suggests a scene. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_59",
+    "name": "Music opportunity · 04",
+    "description": "A song is attracting early attention. A holiday deadline leaves little room to move.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 1
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_60",
+    "name": "Monsoon delay · 05",
+    "description": "Rain threatens the schedule. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_61",
+    "name": "Late arrival · 05",
+    "description": "A performer misses the call time. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_62",
+    "name": "Leaked footage · 05",
+    "description": "Unfinished footage circulates online. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_63",
+    "name": "Creative disagreement · 05",
+    "description": "The team wants a different ending. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_64",
+    "name": "Investor hesitation · 05",
+    "description": "Your backer requests a revised forecast. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_65",
+    "name": "Festival invitation · 05",
+    "description": "A curator asks for a work in progress. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_66",
+    "name": "Viral conversation · 05",
+    "description": "A scene sparks an online discussion. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_67",
+    "name": "Safety concern · 05",
+    "description": "A difficult setup needs extra care. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_68",
+    "name": "Permit question · 05",
+    "description": "A location official requests documents. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_69",
+    "name": "Rival announcement · 05",
+    "description": "Another film targets your release window. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_70",
+    "name": "A mentor calls · 05",
+    "description": "An experienced filmmaker offers advice. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_71",
+    "name": "Unexpected repair · 05",
+    "description": "A piece of equipment needs servicing. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_72",
+    "name": "Press interview · 05",
+    "description": "A journalist requests a conversation. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_73",
+    "name": "Fresh idea · 05",
+    "description": "A junior colleague suggests a scene. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_74",
+    "name": "Music opportunity · 05",
+    "description": "A song is attracting early attention. Your small team is working with borrowed equipment.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_75",
+    "name": "Monsoon delay · 06",
+    "description": "Rain threatens the schedule. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_76",
+    "name": "Late arrival · 06",
+    "description": "A performer misses the call time. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_77",
+    "name": "Leaked footage · 06",
+    "description": "Unfinished footage circulates online. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_78",
+    "name": "Creative disagreement · 06",
+    "description": "The team wants a different ending. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_79",
+    "name": "Investor hesitation · 06",
+    "description": "Your backer requests a revised forecast. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_80",
+    "name": "Festival invitation · 06",
+    "description": "A curator asks for a work in progress. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_81",
+    "name": "Viral conversation · 06",
+    "description": "A scene sparks an online discussion. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_82",
+    "name": "Safety concern · 06",
+    "description": "A difficult setup needs extra care. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_83",
+    "name": "Permit question · 06",
+    "description": "A location official requests documents. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_84",
+    "name": "Rival announcement · 06",
+    "description": "Another film targets your release window. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_85",
+    "name": "A mentor calls · 06",
+    "description": "An experienced filmmaker offers advice. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_86",
+    "name": "Unexpected repair · 06",
+    "description": "A piece of equipment needs servicing. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_87",
+    "name": "Press interview · 06",
+    "description": "A journalist requests a conversation. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_88",
+    "name": "Fresh idea · 06",
+    "description": "A junior colleague suggests a scene. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_89",
+    "name": "Music opportunity · 06",
+    "description": "A song is attracting early attention. The producer asks you to protect the contingency fund.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_90",
+    "name": "Monsoon delay · 07",
+    "description": "Rain threatens the schedule. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_91",
+    "name": "Late arrival · 07",
+    "description": "A performer misses the call time. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_92",
+    "name": "Leaked footage · 07",
+    "description": "Unfinished footage circulates online. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_93",
+    "name": "Creative disagreement · 07",
+    "description": "The team wants a different ending. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_94",
+    "name": "Investor hesitation · 07",
+    "description": "Your backer requests a revised forecast. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_95",
+    "name": "Festival invitation · 07",
+    "description": "A curator asks for a work in progress. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_96",
+    "name": "Viral conversation · 07",
+    "description": "A scene sparks an online discussion. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_97",
+    "name": "Safety concern · 07",
+    "description": "A difficult setup needs extra care. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_98",
+    "name": "Permit question · 07",
+    "description": "A location official requests documents. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_99",
+    "name": "Rival announcement · 07",
+    "description": "Another film targets your release window. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_100",
+    "name": "A mentor calls · 07",
+    "description": "An experienced filmmaker offers advice. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_101",
+    "name": "Unexpected repair · 07",
+    "description": "A piece of equipment needs servicing. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_102",
+    "name": "Press interview · 07",
+    "description": "A journalist requests a conversation. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_103",
+    "name": "Fresh idea · 07",
+    "description": "A junior colleague suggests a scene. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_104",
+    "name": "Music opportunity · 07",
+    "description": "A song is attracting early attention. A remote location has limited transport connections.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_105",
+    "name": "Monsoon delay · 08",
+    "description": "Rain threatens the schedule. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_106",
+    "name": "Late arrival · 08",
+    "description": "A performer misses the call time. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_107",
+    "name": "Leaked footage · 08",
+    "description": "Unfinished footage circulates online. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_108",
+    "name": "Creative disagreement · 08",
+    "description": "The team wants a different ending. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_109",
+    "name": "Investor hesitation · 08",
+    "description": "Your backer requests a revised forecast. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_110",
+    "name": "Festival invitation · 08",
+    "description": "A curator asks for a work in progress. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_111",
+    "name": "Viral conversation · 08",
+    "description": "A scene sparks an online discussion. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_112",
+    "name": "Safety concern · 08",
+    "description": "A difficult setup needs extra care. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_113",
+    "name": "Permit question · 08",
+    "description": "A location official requests documents. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_114",
+    "name": "Rival announcement · 08",
+    "description": "Another film targets your release window. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_115",
+    "name": "A mentor calls · 08",
+    "description": "An experienced filmmaker offers advice. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_116",
+    "name": "Unexpected repair · 08",
+    "description": "A piece of equipment needs servicing. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_117",
+    "name": "Press interview · 08",
+    "description": "A journalist requests a conversation. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_118",
+    "name": "Fresh idea · 08",
+    "description": "A junior colleague suggests a scene. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_119",
+    "name": "Music opportunity · 08",
+    "description": "A song is attracting early attention. The crew has proposed a simpler, more intimate approach.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 2
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_120",
+    "name": "Monsoon delay · 09",
+    "description": "Rain threatens the schedule. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_121",
+    "name": "Late arrival · 09",
+    "description": "A performer misses the call time. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_122",
+    "name": "Leaked footage · 09",
+    "description": "Unfinished footage circulates online. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_123",
+    "name": "Creative disagreement · 09",
+    "description": "The team wants a different ending. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_124",
+    "name": "Investor hesitation · 09",
+    "description": "Your backer requests a revised forecast. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_125",
+    "name": "Festival invitation · 09",
+    "description": "A curator asks for a work in progress. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_126",
+    "name": "Viral conversation · 09",
+    "description": "A scene sparks an online discussion. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_127",
+    "name": "Safety concern · 09",
+    "description": "A difficult setup needs extra care. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_128",
+    "name": "Permit question · 09",
+    "description": "A location official requests documents. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_129",
+    "name": "Rival announcement · 09",
+    "description": "Another film targets your release window. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_130",
+    "name": "A mentor calls · 09",
+    "description": "An experienced filmmaker offers advice. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_131",
+    "name": "Unexpected repair · 09",
+    "description": "A piece of equipment needs servicing. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_132",
+    "name": "Press interview · 09",
+    "description": "A journalist requests a conversation. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_133",
+    "name": "Fresh idea · 09",
+    "description": "A junior colleague suggests a scene. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_134",
+    "name": "Music opportunity · 09",
+    "description": "A song is attracting early attention. An international partner needs a delivery update.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_135",
+    "name": "Monsoon delay · 10",
+    "description": "Rain threatens the schedule. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Schedule a covered set",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Protect the location",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_136",
+    "name": "Late arrival · 10",
+    "description": "A performer misses the call time. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Rehearse with stand-ins",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Pay for transport",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_137",
+    "name": "Leaked footage · 10",
+    "description": "Unfinished footage circulates online. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Release an official preview",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Request a takedown",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_138",
+    "name": "Creative disagreement · 10",
+    "description": "The team wants a different ending. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Listen and recut",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Defend your vision",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_139",
+    "name": "Investor hesitation · 10",
+    "description": "Your backer requests a revised forecast. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "financing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Present a careful plan",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Offer more backend",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_140",
+    "name": "Festival invitation · 10",
+    "description": "A curator asks for a work in progress. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "post",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Send a private screener",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Wait for the final cut",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_141",
+    "name": "Viral conversation · 10",
+    "description": "A scene sparks an online discussion. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Join the conversation",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Let the audience lead",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_142",
+    "name": "Safety concern · 10",
+    "description": "A difficult setup needs extra care. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Bring a safety specialist",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Simplify the scene",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_143",
+    "name": "Permit question · 10",
+    "description": "A location official requests documents. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "preproduction",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Reschedule and comply",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Move to a set",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_144",
+    "name": "Rival announcement · 10",
+    "description": "Another film targets your release window. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "distribution",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Move the release",
+        "cash": -1.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the date",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_145",
+    "name": "A mentor calls · 10",
+    "description": "An experienced filmmaker offers advice. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Listen closely",
+        "cash": -2.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Exchange ideas",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_146",
+    "name": "Unexpected repair · 10",
+    "description": "A piece of equipment needs servicing. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "production",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Rent a replacement",
+        "cash": -3.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Change the shot list",
+        "cash": 0,
+        "quality": -1,
+        "hype": 4,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_147",
+    "name": "Press interview · 10",
+    "description": "A journalist requests a conversation. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Discuss the craft",
+        "cash": -4.0,
+        "quality": 2,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Discuss the audience",
+        "cash": 0,
+        "quality": -1,
+        "hype": 5,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_148",
+    "name": "Fresh idea · 10",
+    "description": "A junior colleague suggests a scene. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "development",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Develop the idea",
+        "cash": -5.0,
+        "quality": 3,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Keep the draft focused",
+        "cash": 0,
+        "quality": -1,
+        "hype": 2,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  },
+  {
+    "id": "event_149",
+    "name": "Music opportunity · 10",
+    "description": "A song is attracting early attention. Your distributor is comparing the plan with a rival release.",
+    "conditions": {
+      "stage": "marketing",
+      "min_week": 3
+    },
+    "choices": [
+      {
+        "label": "Fund a lyric video",
+        "cash": -6.0,
+        "quality": 4,
+        "hype": 1,
+        "stress": -2,
+        "relationship": 2
+      },
+      {
+        "label": "Arrange a live session",
+        "cash": 0,
+        "quality": -1,
+        "hype": 3,
+        "stress": 3,
+        "relationship": -1
+      }
+    ]
+  }
+]

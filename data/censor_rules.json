@@ -1,0 +1,23 @@
+[
+  {
+    "id": "general",
+    "name": "General audience",
+    "rating": "U",
+    "delay": 0,
+    "quality_loss": 0
+  },
+  {
+    "id": "teen",
+    "name": "Mature themes: review and edits",
+    "rating": "12+",
+    "delay": 1,
+    "quality_loss": 2
+  },
+  {
+    "id": "adult",
+    "name": "Restricted release",
+    "rating": "18+",
+    "delay": 2,
+    "quality_loss": 4
+  }
+]

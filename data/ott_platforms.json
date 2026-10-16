@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ott_0",
+    "name": "Chorki",
+    "price_range": [
+      20,
+      120
+    ],
+    "window": 8
+  },
+  {
+    "id": "ott_1",
+    "name": "Hoichoi",
+    "price_range": [
+      30,
+      150
+    ],
+    "window": 8
+  },
+  {
+    "id": "ott_2",
+    "name": "Bongo",
+    "price_range": [
+      40,
+      180
+    ],
+    "window": 8
+  },
+  {
+    "id": "ott_3",
+    "name": "Bioscope",
+    "price_range": [
+      50,
+      210
+    ],
+    "window": 8
+  },
+  {
+    "id": "ott_4",
+    "name": "Deepto Play",
+    "price_range": [
+      60,
+      240
+    ],
+    "window": 8
+  }
+]

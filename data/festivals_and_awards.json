@@ -1,0 +1,37 @@
+[
+  {
+    "id": "award_0",
+    "name": "National Film Awards",
+    "threshold": 62,
+    "campaign_cost": 3,
+    "prestige": 4
+  },
+  {
+    "id": "award_1",
+    "name": "Meril-Prothom Alo",
+    "threshold": 66,
+    "campaign_cost": 4,
+    "prestige": 5
+  },
+  {
+    "id": "award_2",
+    "name": "Dhaka International Film Festival",
+    "threshold": 70,
+    "campaign_cost": 5,
+    "prestige": 6
+  },
+  {
+    "id": "award_3",
+    "name": "Busan festival selection",
+    "threshold": 74,
+    "campaign_cost": 6,
+    "prestige": 7
+  },
+  {
+    "id": "award_4",
+    "name": "Oscar submission",
+    "threshold": 78,
+    "campaign_cost": 7,
+    "prestige": 8
+  }
+]

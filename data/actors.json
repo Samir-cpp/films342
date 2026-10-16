@@ -1,0 +1,667 @@
+[
+  {
+    "id": "actor_0",
+    "name": "Arian Rahman",
+    "fictional": true,
+    "profession": "actor",
+    "age": 12,
+    "tier": 1,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 30,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 40
+  },
+  {
+    "id": "actor_1",
+    "name": "Nabil Karim",
+    "fictional": true,
+    "profession": "actor",
+    "age": 21,
+    "tier": 2,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 31,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 41
+  },
+  {
+    "id": "actor_2",
+    "name": "Farhan Kabir",
+    "fictional": true,
+    "profession": "actor",
+    "age": 22,
+    "tier": 3,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 32,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 42
+  },
+  {
+    "id": "actor_3",
+    "name": "Rafi Khan",
+    "fictional": true,
+    "profession": "actor",
+    "age": 23,
+    "tier": 4,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      26,
+      51
+    ],
+    "reputation": 33,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 43
+  },
+  {
+    "id": "actor_4",
+    "name": "Imran Bose",
+    "fictional": true,
+    "profession": "actor",
+    "age": 24,
+    "tier": 5,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      34,
+      66
+    ],
+    "reputation": 34,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 44
+  },
+  {
+    "id": "actor_5",
+    "name": "Tariq Rahman",
+    "fictional": true,
+    "profession": "actor",
+    "age": 25,
+    "tier": 1,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 35,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 45
+  },
+  {
+    "id": "actor_6",
+    "name": "Hasan Karim",
+    "fictional": true,
+    "profession": "actor",
+    "age": 26,
+    "tier": 2,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 36,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 46
+  },
+  {
+    "id": "actor_7",
+    "name": "Adnan Kabir",
+    "fictional": true,
+    "profession": "actor",
+    "age": 27,
+    "tier": 3,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 37,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 47
+  },
+  {
+    "id": "actor_8",
+    "name": "Samir Khan",
+    "fictional": true,
+    "profession": "actor",
+    "age": 28,
+    "tier": 4,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      26,
+      51
+    ],
+    "reputation": 38,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 48
+  },
+  {
+    "id": "actor_9",
+    "name": "Rohan Bose",
+    "fictional": true,
+    "profession": "actor",
+    "age": 29,
+    "tier": 5,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      34,
+      66
+    ],
+    "reputation": 39,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 49
+  },
+  {
+    "id": "actor_10",
+    "name": "Mira Rahman",
+    "fictional": true,
+    "profession": "actor",
+    "age": 30,
+    "tier": 1,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 40,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 50
+  },
+  {
+    "id": "actor_11",
+    "name": "Nadia Karim",
+    "fictional": true,
+    "profession": "actor",
+    "age": 31,
+    "tier": 2,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 41,
+    "availability": 0.9500000000000001,
+    "quirks": "Method performer",
+    "skill": 51
+  },
+  {
+    "id": "actor_12",
+    "name": "Farah Kabir",
+    "fictional": true,
+    "profession": "actor",
+    "age": 32,
+    "tier": 3,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 42,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 52
+  },
+  {
+    "id": "actor_13",
+    "name": "Tisha Khan",
+    "fictional": true,
+    "profession": "actor",
+    "age": 33,
+    "tier": 4,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      26,
+      51
+    ],
+    "reputation": 43,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 53
+  },
+  {
+    "id": "actor_14",
+    "name": "Raisa Bose",
+    "fictional": true,
+    "profession": "actor",
+    "age": 34,
+    "tier": 5,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      34,
+      66
+    ],
+    "reputation": 44,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 54
+  },
+  {
+    "id": "actor_15",
+    "name": "Asha Rahman",
+    "fictional": true,
+    "profession": "actor",
+    "age": 35,
+    "tier": 1,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 45,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 55
+  },
+  {
+    "id": "actor_16",
+    "name": "Nila Karim",
+    "fictional": true,
+    "profession": "actor",
+    "age": 36,
+    "tier": 2,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 46,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 56
+  },
+  {
+    "id": "actor_17",
+    "name": "Sadia Kabir",
+    "fictional": true,
+    "profession": "actor",
+    "age": 37,
+    "tier": 3,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 47,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 57
+  },
+  {
+    "id": "actor_18",
+    "name": "Rumi Khan",
+    "fictional": true,
+    "profession": "actor",
+    "age": 38,
+    "tier": 4,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      26,
+      51
+    ],
+    "reputation": 48,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 58
+  },
+  {
+    "id": "actor_19",
+    "name": "Anika Bose",
+    "fictional": true,
+    "profession": "actor",
+    "age": 39,
+    "tier": 5,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      34,
+      66
+    ],
+    "reputation": 49,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 59
+  },
+  {
+    "id": "actor_20",
+    "name": "Arian Chowdhury",
+    "fictional": true,
+    "profession": "actor",
+    "age": 40,
+    "tier": 1,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 50,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 60
+  },
+  {
+    "id": "actor_21",
+    "name": "Nabil Haque",
+    "fictional": true,
+    "profession": "actor",
+    "age": 41,
+    "tier": 2,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 51,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 61
+  },
+  {
+    "id": "actor_22",
+    "name": "Farhan Sen",
+    "fictional": true,
+    "profession": "actor",
+    "age": 42,
+    "tier": 3,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 52,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 62
+  },
+  {
+    "id": "actor_23",
+    "name": "Rafi Alam",
+    "fictional": true,
+    "profession": "actor",
+    "age": 43,
+    "tier": 4,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      26,
+      51
+    ],
+    "reputation": 53,
+    "availability": 0.9500000000000001,
+    "quirks": "Method performer",
+    "skill": 63
+  },
+  {
+    "id": "actor_24",
+    "name": "Imran Akter",
+    "fictional": true,
+    "profession": "actor",
+    "age": 44,
+    "tier": 5,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      34,
+      66
+    ],
+    "reputation": 54,
+    "availability": 0.65,
+    "quirks": "Early riser",
+    "skill": 64
+  },
+  {
+    "id": "actor_25",
+    "name": "Tariq Chowdhury",
+    "fictional": true,
+    "profession": "actor",
+    "age": 45,
+    "tier": 1,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 55,
+    "availability": 0.75,
+    "quirks": "Improviser",
+    "skill": 65
+  },
+  {
+    "id": "actor_26",
+    "name": "Hasan Haque",
+    "fictional": true,
+    "profession": "actor",
+    "age": 46,
+    "tier": 2,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 56,
+    "availability": 0.8500000000000001,
+    "quirks": "Method performer",
+    "skill": 66
+  },
+  {
+    "id": "actor_27",
+    "name": "Adnan Sen",
+    "fictional": true,
+    "profession": "actor",
+    "age": 47,
+    "tier": 3,
+    "genres": [
+      "Thriller"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 57,
+    "availability": 0.9500000000000001,
+    "quirks": "Early riser",
+    "skill": 67
+  },
+  {
+    "id": "actor_28",
+    "name": "Samir Alam",
+    "fictional": true,
+    "profession": "actor",
+    "age": 48,
+    "tier": 4,
+    "genres": [
+      "Comedy"
+    ],
+    "fee_range": [
+      26,
+      51
+    ],
+    "reputation": 58,
+    "availability": 0.65,
+    "quirks": "Improviser",
+    "skill": 68
+  },
+  {
+    "id": "actor_29",
+    "name": "Rohan Akter",
+    "fictional": true,
+    "profession": "actor",
+    "age": 49,
+    "tier": 5,
+    "genres": [
+      "Family"
+    ],
+    "fee_range": [
+      34,
+      66
+    ],
+    "reputation": 59,
+    "availability": 0.75,
+    "quirks": "Method performer",
+    "skill": 69
+  },
+  {
+    "id": "actor_30",
+    "name": "Mira Chowdhury",
+    "fictional": true,
+    "profession": "actor",
+    "age": 50,
+    "tier": 1,
+    "genres": [
+      "Historical"
+    ],
+    "fee_range": [
+      2,
+      6
+    ],
+    "reputation": 60,
+    "availability": 0.8500000000000001,
+    "quirks": "Early riser",
+    "skill": 70
+  },
+  {
+    "id": "actor_31",
+    "name": "Nadia Haque",
+    "fictional": true,
+    "profession": "actor",
+    "age": 51,
+    "tier": 2,
+    "genres": [
+      "Horror"
+    ],
+    "fee_range": [
+      10,
+      21
+    ],
+    "reputation": 61,
+    "availability": 0.9500000000000001,
+    "quirks": "Improviser",
+    "skill": 71
+  },
+  {
+    "id": "actor_32",
+    "name": "Farah Sen",
+    "fictional": true,
+    "profession": "actor",
+    "age": 52,
+    "tier": 3,
+    "genres": [
+      "Drama"
+    ],
+    "fee_range": [
+      18,
+      36
+    ],
+    "reputation": 62,
+    "availability": 0.65,
+    "quirks": "Method performer",
+    "skill": 72
+  },
+  {
+    "id": "actor_33",
+    "name": "Tisha Alam",
+    "fictional": true,
+    "profession": "actor",
+    "age": 53,
+    "tier": 4,
+    "genres": [
+      "Action"
+    ],
+    "fee_range": [
+      26,
+      51
+    ],
+    "reputation": 63,
+    "availability": 0.75,
+    "quirks": "Early riser",
+    "skill": 73
+  },
+  {
+    "id": "actor_34",
+    "name": "Raisa Akter",
+    "fictional": true,
+    "profession": "actor",
+    "age": 54,
+    "tier": 5,
+    "genres": [
+      "Romance"
+    ],
+    "fee_range": [
+      34,
+      66
+    ],
+    "reputation": 64,
+    "availability": 0.8500000000000001,
+    "quirks": "Improviser",
+    "skill": 74
+  }
+]

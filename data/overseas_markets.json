@@ -1,0 +1,56 @@
+[
+  {
+    "id": "market_0",
+    "name": "UK",
+    "price_range": [
+      3,
+      10
+    ],
+    "window": 2
+  },
+  {
+    "id": "market_1",
+    "name": "USA / Canada",
+    "price_range": [
+      4,
+      13
+    ],
+    "window": 2
+  },
+  {
+    "id": "market_2",
+    "name": "Middle East",
+    "price_range": [
+      5,
+      16
+    ],
+    "window": 2
+  },
+  {
+    "id": "market_3",
+    "name": "Malaysia / Singapore",
+    "price_range": [
+      6,
+      19
+    ],
+    "window": 2
+  },
+  {
+    "id": "market_4",
+    "name": "Australia",
+    "price_range": [
+      7,
+      22
+    ],
+    "window": 2
+  },
+  {
+    "id": "market_5",
+    "name": "West Bengal",
+    "price_range": [
+      8,
+      25
+    ],
+    "window": 2
+  }
+]

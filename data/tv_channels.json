@@ -1,0 +1,47 @@
+[
+  {
+    "id": "tv_0",
+    "name": "Channel i",
+    "price_range": [
+      5,
+      20
+    ],
+    "window": 16
+  },
+  {
+    "id": "tv_1",
+    "name": "NTV",
+    "price_range": [
+      5,
+      25
+    ],
+    "window": 16
+  },
+  {
+    "id": "tv_2",
+    "name": "ATN Bangla",
+    "price_range": [
+      5,
+      30
+    ],
+    "window": 16
+  },
+  {
+    "id": "tv_3",
+    "name": "RTV",
+    "price_range": [
+      5,
+      35
+    ],
+    "window": 16
+  },
+  {
+    "id": "tv_4",
+    "name": "Banglavision",
+    "price_range": [
+      5,
+      40
+    ],
+    "window": 16
+  }
+]
