@@ -1,3 +1,16 @@
+# Version 0.3 PC validation — 2026-10-16
+
+- **48 GUT tests / 2,958 assertions passed**, with no skipped or failed tests. Includes PC navigation/save shortcuts and typing/dialog protection alongside the prior simulation and mobile layout checks.
+- Headless UI smoke passes all 14 screens and all ten production stages.
+- Native X11/Mesa graphical verification passes at **960×640, 1280×720 and 1920×1080**: actual viewport sizing, compact breakpoint, time-control dimensions, unsubmitted draft preservation and fullscreen/windowed transitions. Run with `DISPLAY=:10 LIBGL_ALWAYS_SOFTWARE=1 bash tools/run.sh --audio-driver Dummy -- --verify-pc-ui --silent-ui` when an X server is available.
+- Desktop screens rendered at 1280×720 and inspected. The cloud graphics backend is software Mesa; GPU performance and speaker output are not verified.
+- The rebuilt Linux binary passes the two-film career integration check (exclusive licenses, award win, catalog royalties, sequel, JSON reload) and the native graphical PC verifier. All four new desktop/source ZIP archives pass CRC checks.
+- Desktop archives are cross-built with pinned Godot 4.6.3. Windows and macOS runtime testing remains unavailable here. macOS is unsigned. Mobile downloads remain the previously tested v0.2 packages; they were not rebuilt for this PC update.
+
+The v0.2 record below describes the retained mobile artifacts and historical checks.
+
+---
+
 # Version 0.2 validation — 2026-10-16
 
 - **46 GUT tests, 2,934 assertions passed**, no failed/skipped tests or script errors. Five test scripts cover the prior economic/career regressions plus next-action recommendations, production-gate pause, quick-start validity, touch layout bounds, 360-pixel portrait and landscape layouts for all ten film stages, zoom/large text, casting filter/tab retention, background save/pause, and keyboard resize preserving an editor or dialog.

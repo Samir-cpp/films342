@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 — 2026-10-16
+
+- PC windows now use their actual dimensions, with compact navigation below 1100 pixels and a 960×640 minimum. Fixed wrapped time controls collapsing at desktop widths.
+- Added saved fullscreen preference, F11 / Alt+Enter, Ctrl+S autosave, 1–3 page shortcuts, F1 help and an Open local save folder action. Typing and open dialogs block gameplay shortcuts.
+- Grouped desktop navigation and added a ten-stage production timeline with completed/current/upcoming status.
+- Added keyboard regression tests and a native graphical verifier for resizing, draft retention, fullscreen and time-control dimensions.
+- Rebuilt Windows, Linux, macOS and source packages. Existing mobile packages remain v0.2.
+
+
 ## 0.2.0 — 2026-10-16
 
 - Added a recommended NEXT STEP action for each production phase, a valid quick-start director, a money/profit glossary, save feedback and confirmation before replacing a career. Auto time pauses at production gates.

@@ -26,7 +26,12 @@ const DESTINATIONS := ["Dashboard","Film studio","New screenplay","Release calen
 func mobile_device() -> bool:
  return OS.has_feature("mobile") or "--mobile-ui" in OS.get_cmdline_user_args()
 func configure_mobile_viewport() -> void:
- if not mobile_device():return
+ if not mobile_device():
+  if DisplayServer.get_name()=="headless":return
+  var desktop := get_window()
+  var logical := Vector2i(maxi(800,desktop.size.x),maxi(600,desktop.size.y))
+  if desktop.content_scale_size!=logical:desktop.content_scale_size=logical
+  return
  var window := get_window()
  var physical: Vector2i = window.size
  var density: float = maxf(1.0,DisplayServer.screen_get_dpi()/160.0)
@@ -101,6 +106,9 @@ func restore_scroll(area: ScrollContainer, position: int) -> void:
 
 func _ready() -> void:
  configure_mobile_viewport()
+ if not mobile_device() and DisplayServer.get_name()!="headless":
+  get_window().min_size=Vector2i(960,640)
+  apply_window_mode(bool(GameState.settings.get("fullscreen",false)))
  build_theme()
  get_viewport().size_changed.connect(viewport_changed)
  get_tree().auto_accept_quit=false
@@ -112,6 +120,8 @@ func _ready() -> void:
   call_deferred("verify_export")
  if "--smoke-ui" in OS.get_cmdline_user_args():
   call_deferred("smoke_ui")
+ if "--verify-pc-ui" in OS.get_cmdline_user_args():
+  call_deferred("verify_pc_ui")
  if "--capture-ui" in OS.get_cmdline_user_args():
   call_deferred("capture_ui")
 func build_theme() -> void:
@@ -225,6 +235,8 @@ func render() -> void:
   nav.size_flags_vertical=Control.SIZE_EXPAND_FILL
   nav_scroll.add_child(nav)
   for destination in DESTINATIONS:
+   if destination in ["Dashboard","Release calendar","How to play"]:
+    label(nav,{"Dashboard":"PRODUCTION","Release calendar":"YOUR CAREER","How to play":"TOOLS & HELP"}[destination],11,MUTED)
    var b := button(nav,destination,func(): go(destination))
    b.alignment=HORIZONTAL_ALIGNMENT_LEFT
    if destination==page:b.add_theme_color_override("font_color",MINT)
@@ -239,6 +251,7 @@ func render() -> void:
  if not portrait:spacer(heading)
  if not GameState.state.is_empty() and not GameState.state.retired:
   var time_controls := hbox(heading)
+  if not portrait:time_controls.custom_minimum_size.x=350
   button(time_controls,"Pause" if not Clock.paused else "Auto",func(): Clock.paused=not Clock.paused; schedule_render(),"Automatic weeks pause whenever a production decision is needed.")
   var speed := option(time_controls,["1×","2×","4×"],[1,2,4].find(Clock.speed))
   speed.custom_minimum_size.x=70
@@ -499,6 +512,7 @@ func dashboard() -> void:
   label(focus,DataManager.config("content").stage_labels[int(s.active.stage)],17,MINT)
   meter(focus,"Stage progress",s.active.progress,maxf(1,s.active.stage_total))
   label(focus,DataManager.config("content").tips[int(s.active.stage)],15,MUTED)
+  production_timeline(focus,int(s.active.stage))
   button(focus,"Open film studio  →",func(): go("Film studio"))
  var life := card(row,s.director.name,"%s · Age %d"%[s.director.district,s.director.age])
  var avatar := Art.new()
@@ -815,7 +829,38 @@ func saves() -> void:
   button(row,"Load",func():
    if SaveManager.load_slot(slot): go("Dashboard")
   ).disabled=SaveManager.read_slot(slot).is_empty()
+func apply_window_mode(fullscreen: bool) -> void:
+ if mobile_device() or DisplayServer.get_name()=="headless":return
+ get_window().mode=Window.MODE_FULLSCREEN if fullscreen else Window.MODE_WINDOWED
+func toggle_fullscreen() -> void:
+ var enabled: bool = not bool(GameState.settings.get("fullscreen",false))
+ GameState.settings["fullscreen"]=enabled
+ SaveManager.save_settings()
+ apply_window_mode(enabled)
+func production_timeline(parent: Node, stage: int) -> void:
+ var grid := GridContainer.new()
+ grid.columns=2
+ grid.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+ parent.add_child(grid)
+ var stages: Array = DataManager.config("content").stage_labels
+ for i in range(stages.size()):
+  var text: String = ("✓ " if i<stage else ("→ " if i==stage else "· "))+str(stages[i])
+  var item := label(grid,text,12,MINT if i==stage else MUTED)
+  item.tooltip_text="Completed" if i<stage else ("Current stage" if i==stage else "Upcoming")
 func settings_screen() -> void:
+ if not mobile_device():
+  var desktop := card(body,"PC display & controls","Resize the window freely. The layout adapts to your available space.")
+  var fullscreen := CheckBox.new()
+  fullscreen.text="Fullscreen · F11"
+  fullscreen.button_pressed=bool(GameState.settings.get("fullscreen",false))
+  desktop.add_child(fullscreen)
+  fullscreen.toggled.connect(func(enabled: bool):
+   GameState.settings["fullscreen"]=enabled
+   SaveManager.save_settings()
+   apply_window_mode(enabled)
+  )
+  label(desktop,"Space · pause / auto    N · next week    Ctrl+S · save progress\n1 · Dashboard    2 · Film studio    3 · Release calendar\nF1 · How to play    F11 / Alt+Enter · fullscreen    Esc · menu",16,MUTED)
+  button(desktop,"Open local save folder",func(): OS.shell_open(ProjectSettings.globalize_path("user://")))
  var panel := card(body,"Make yourself comfortable")
  for setting in [["music","Calm music"],["sound","UI sounds"],["fictionalize","Fictionalize names"]]:
   var check := CheckBox.new()
@@ -867,9 +912,22 @@ func show_event() -> void:
 func _unhandled_key_input(event: InputEvent) -> void:
  if not event is InputEventKey or not event.pressed or event.echo:
   return
+ if event.keycode==KEY_F11 or (event.keycode==KEY_ENTER and event.alt_pressed):
+  toggle_fullscreen()
+  get_viewport().set_input_as_handled()
+  return
+ for child in get_children():
+  if child is Window and child.visible:return
  if get_viewport().gui_get_focus_owner() is LineEdit or get_viewport().gui_get_focus_owner() is TextEdit:
   return
- if event.keycode==KEY_SPACE and not GameState.state.is_empty():
+ if event.ctrl_pressed and event.keycode==KEY_S:
+  var error := SaveManager.save_slot(0)
+  receive_notice("Progress saved to autosave." if error==OK else "Save failed. Open Save manager to try again.")
+ elif event.keycode==KEY_F1:
+  go("How to play")
+ elif event.keycode in [KEY_1,KEY_2,KEY_3] and not event.ctrl_pressed and not event.alt_pressed:
+  go({KEY_1:"Dashboard",KEY_2:"Film studio",KEY_3:"Release calendar"}[event.keycode])
+ elif event.keycode==KEY_SPACE and not GameState.state.is_empty():
   Clock.paused=not Clock.paused
   schedule_render()
  elif event.keycode==KEY_N and not GameState.state.is_empty():
@@ -1000,3 +1058,33 @@ func _notification(what: int) -> void:
 func filter_people(list: VBoxContainer, query: String) -> void:
  for row in list.get_children():
   row.visible=query.strip_edges().to_lower() in str(row.get_meta("search",""))
+
+func verify_pc_ui() -> void:
+ GameState.new_career({"name":"Desktop Test","age":26,"district":"Dhaka","background":0,"traits":["trait_1","trait_5"]},342)
+ var valid := true
+ for dimensions in [Vector2i(960,640),Vector2i(1280,720),Vector2i(1920,1080)]:
+  get_window().size=dimensions
+  await get_tree().create_timer(.3).timeout
+  go("Dashboard")
+  await get_tree().create_timer(.3).timeout
+  valid=valid and get_window().content_scale_size==dimensions
+  valid=valid and compact==(dimensions.x<1100)
+  var controls: Array[Node] = [self]
+  while not controls.is_empty():
+   var node: Node = controls.pop_back()
+   if node is Button and node.is_visible_in_tree() and node.text.begins_with("Next week"):
+    valid=valid and node.size.x>=100 and node.size.y<80
+   controls.append_array(node.get_children())
+ go("New screenplay")
+ fields.title.text="Resizing keeps this draft"
+ get_window().size=Vector2i(1280,800)
+ await get_tree().create_timer(.3).timeout
+ valid=valid and fields.title.text=="Resizing keeps this draft"
+ apply_window_mode(true)
+ await get_tree().create_timer(.3).timeout
+ valid=valid and get_window().mode==Window.MODE_FULLSCREEN
+ apply_window_mode(false)
+ await get_tree().create_timer(.3).timeout
+ valid=valid and get_window().mode==Window.MODE_WINDOWED
+ print("PC_UI_VERIFICATION_OK" if valid else "PC_UI_VERIFICATION_FAILED")
+ get_tree().quit(0 if valid else 1)

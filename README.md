@@ -1,10 +1,10 @@
 # THE DIRECTOR: Dhallywood
 
-A native, single-player Godot desktop filmmaking career simulation. This is **v0.2, a playable desktop and mobile edition**, not a browser game. Create a director in Bangladesh in 2026, write a film, pitch financing, hire an ensemble, shoot, edit, market, license rights, release over eight weeks, campaign for awards, and build a catalog with sequels and restored cuts.
+A native, single-player Godot desktop filmmaking career simulation. This is **v0.3, with an improved PC edition**, not a browser game. Create a director in Bangladesh in 2026, write a film, pitch financing, hire an ensemble, shoot, edit, market, license rights, release over eight weeks, campaign for awards, and build a catalog with sequels and restored cuts.
 
 ## Download from GitHub
 
-Choose your platform. Desktop ZIPs run after extraction; Android has a directly installable test APK. iOS is an Xcode project that must be built and signed on a Mac:
+The Windows, Linux, macOS and source downloads are **v0.3**. Extract the Windows ZIP and run `TheDirector.exe`. Mobile downloads remain **v0.2**: Android is a test APK; iOS is an Xcode project that requires a Mac and signing.
 
 - [Android APK — debug-signed test build](https://github.com/Samir-cpp/films342/raw/refs/heads/main/downloads/TheDirector-Android.apk)
 - [Android ZIP / installation notes](https://github.com/Samir-cpp/films342/raw/refs/heads/main/downloads/TheDirector-Android.zip)
@@ -41,9 +41,9 @@ Windows and macOS exports are cross-built on Linux. Linux is the runtime tested 
 9. Open in cinemas when the date arrives. Advance eight weeks to see gross, producer receipts, reviews, retention and profit. Handle the event overlay whenever it appears.
 10. Campaign for awards, archive the film, use Filmography to create a sequel or restored release. Deferred license payments and catalog royalties continue across weeks. Career offers training, paid advertising work, recovery, mentoring, loans, a production-house milestone and retirement.
 
-**Mouse:** all controls. **Keyboard:** Tab / Shift+Tab focus, arrows for selectors, Enter / Space activate focused controls. **N:** next week. **Space** with no control consuming the key toggles auto-time. **Esc:** menu. Text entry preserves ordinary typing. Calendar runs at 1× / 2× / 4× and pauses for events, screen changes, backgrounding and production decision gates. The How to play screen explains money, profit splits and recovery. The casting board supports search by name/role and retains its tab/filter after a hire. Save before retirement to preserve a return point.
+**Mouse:** all controls. **Keyboard:** Tab / Shift+Tab focus, arrows for selectors, Enter / Space activate focused controls. **N:** next week. **Ctrl+S:** save to autosave. **1 / 2 / 3:** Dashboard / Film studio / Release calendar. **F1:** help. **F11 / Alt+Enter:** toggle fullscreen. **Space** with no control consuming the key toggles auto-time. **Esc:** menu. Text entry preserves ordinary typing. Calendar runs at 1× / 2× / 4× and pauses for events, screen changes, backgrounding and production decision gates. The How to play screen explains money, profit splits and recovery. The casting board supports search by name/role and retains its tab/filter after a hire. Save before retirement to preserve a return point.
 
-Settings provide independent music / UI sound, UI scale, font size, fictional-name mode and a Bengali navigation preview. The interface adapts from phone portrait through wide desktop windows. Phones use a compact page selector, stacked cards, larger controls and scrollable event choices; notches use the platform safe area. Portrait/landscape changes preserve unfinished forms. Desktop uses the familiar sidebar. Bengali names and text can be entered using the bundled Noto Sans Bengali font.
+Settings provide independent music / UI sound, UI scale, font size, fictional-name mode and a Bengali navigation preview. The interface adapts from phone portrait through wide desktop windows. Phones use a compact page selector, stacked cards, larger controls and scrollable event choices; notches use the platform safe area. Portrait/landscape changes preserve unfinished forms. Desktop uses a grouped sidebar, a ten-stage production timeline and a layout that follows the actual window dimensions. Settings offers fullscreen and a shortcut to the local save folder. The desktop minimum window is 960×640; large text and UI zoom remain available. Bengali names and text can be entered using the bundled Noto Sans Bengali font.
 
 ## Development
 

@@ -1,8 +1,11 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "godot": "4.6.3",
-  "tests": 46,
-  "assertions": 2934,
+  "tests": 48,
+  "assertions": 2958,
   "android": "debug-signed APK; physical devices untested",
-  "ios": "unsigned Xcode project; requires Mac/Xcode and owner signing; not an IPA"
+  "ios": "unsigned Xcode project; requires Mac/Xcode and owner signing; not an IPA",
+  "desktop_version": "0.3.0",
+  "mobile_version": "0.2.0",
+  "linux_validation": "Two-film career integration and native resize/fullscreen/draft checks passed"
 }
