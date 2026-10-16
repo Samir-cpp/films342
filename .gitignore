@@ -4,3 +4,8 @@ builds/
 *.tmp
 *.log
 __pycache__/
+export_credentials.cfg
+*.keystore
+*.jks
+*.p12
+*.mobileprovision

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0 — 2026-10-16
+
+- Added a recommended NEXT STEP action for each production phase, a valid quick-start director, a money/profit glossary, save feedback and confirmation before replacing a career. Auto time pauses at production gates.
+- Added responsive phone portrait/landscape layouts, compact navigation, 52-pixel touch controls, safe-area insets, larger mobile type, scrollable event choices and form preservation across rotation.
+- App backgrounding pauses time and autosaves. Android Back returns to the menu; iOS avoids an application Quit button.
+- Casting-board searches filter names and crew roles; tab and search selection survive hiring.
+- Added Android APK and iPhone/iPad Xcode export presets, verified SDK bootstrap, mobile build/packaging scripts and an artifact-producing GitHub Actions workflow. Android packages use a local debug key; iOS team is an explicit placeholder.
+- Baked original audio offline to reduce mobile startup work. Virtual-keyboard resizing preserves the focused editor and open name dialog.
+- Added mobile layout/lifecycle, quick-start and recommendation regression coverage. Platform execution evidence and remaining limitations are recorded in docs/VALIDATION.md.
+
 ## 0.1.0 — 2026-10-16
 
 1. **Skeleton / data:** Godot 4.6.3 project, typed DataManager access, schemas, 543 seed records and validated fictional content. Initial economy suite: 18/18 tests passed.

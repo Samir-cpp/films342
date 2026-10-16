@@ -1,0 +1,39 @@
+name: Mobile test builds
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/**', 'scenes/**', 'data/**', 'tests/**', 'tools/**', 'project.godot', 'export_presets.cfg', '.github/workflows/mobile.yml']
+permissions:
+  contents: read
+jobs:
+  mobile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      ANDROID_HOME: ${{ github.workspace }}/.tools/android-sdk
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .tools/bin
+            .tools/data/godot/export_templates
+            .tools/android-sdk
+          key: director-godot-4.6.3-android-35.0.1-v1
+      - name: Test game and mobile layouts
+        run: bash tools/test.sh
+      - name: Build test APK and unsigned Xcode project
+        run: python3 tools/build_mobile.py --accept-sdk-licenses
+      - uses: actions/upload-artifact@v4
+        with:
+          name: director-mobile-0.2
+          path: |
+            builds/TheDirector-Android.apk
+            builds/TheDirector-Android.zip
+            builds/TheDirector-iOS-Xcode.zip
+          if-no-files-found: error

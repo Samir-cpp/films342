@@ -5,7 +5,7 @@ config/name="THE DIRECTOR: Dhallywood"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/icon.svg"
-config/version="0.1.0"
+config/version="0.2.0"
 [autoload]
 EventBus="*res://scripts/autoload/event_bus.gd"
 DataManager="*res://scripts/autoload/data_manager.gd"
@@ -20,8 +20,9 @@ window/size/viewport_height=900
 window/size/window_width_override=1280
 window/size/window_height_override=800
 window/stretch/mode="canvas_items"
-window/size/min_width=1280
-window/size/min_height=720
+window/size/min_width=360
+window/size/min_height=360
+window/handheld/orientation=6
 [rendering]
 textures/vram_compression/import_etc2_astc=true
 renderer/rendering_method="gl_compatibility"
@@ -29,3 +30,7 @@ renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.035, 0.055, 0.075, 1)
 [textures]
 default_filters/use_nearest_mipmap_filter=false
+
+[input_devices]
+pointing/emulate_mouse_from_touch=true
+pointing/emulate_touch_from_mouse=false

@@ -158,6 +158,7 @@ func hire(table: String, id: String) -> bool:
 func next_stage() -> void:
  var f: Dictionary = state.active
  f.stage=int(f.stage)+1
+ if int(f.stage) in [1,2,7,9]:Clock.paused=true
  f.progress=0
  f.stage_total=int(DataManager.config("content").stage_weeks[int(f.stage)])
  if int(f.stage)==4:
@@ -345,6 +346,7 @@ func collect_rights() -> void:
 func finish_film() -> void:
  var f: Dictionary = state.active
  f.stage=9
+ Clock.paused=true
  var net: float = float(f.receipts)-float(f.spent)
  var income: float = float(f.receipts) if f.self_financed else Economy.director_profit(f.receipts,f.spent,f.backend,0)
  state.cash+=income

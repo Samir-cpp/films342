@@ -2038,5 +2038,32 @@
       }
     },
     "$schema": "https://json-schema.org/draft/2020-12/schema"
+  },
+  "player_guide": {
+    "type": "object",
+    "required": [
+      "stages",
+      "glossary"
+    ],
+    "properties": {
+      "stages": {
+        "type": "array",
+        "minItems": 10,
+        "maxItems": 10,
+        "items": {
+          "type": "object",
+          "required": [
+            "title",
+            "text",
+            "label",
+            "action"
+          ]
+        }
+      },
+      "glossary": {
+        "type": "array",
+        "minItems": 1
+      }
+    }
   }
 }

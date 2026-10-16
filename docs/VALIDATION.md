@@ -1,3 +1,25 @@
+# Version 0.2 validation — 2026-10-16
+
+- **46 GUT tests, 2,934 assertions passed**, no failed/skipped tests or script errors. Five test scripts cover the prior economic/career regressions plus next-action recommendations, production-gate pause, quick-start validity, touch layout bounds, 360-pixel portrait and landscape layouts for all ten film stages, zoom/large text, casting filter/tab retention, background save/pause, and keyboard resize preserving an editor or dialog.
+- Headless UI smoke passes for **14 screens and all ten film stages**. Updated Linux exported binary completes two releases, rights sales, an award win, catalog royalties, a sequel and JSON reload. Desktop simulation behavior remains deterministic.
+- **30 content documents / 543 named records** pass the bundled schemas and gameplay invariants. Player guide content is editable JSON.
+- Phone portrait/landscape screens rendered under native X11/Mesa with the mobile UI mode. Android APK installed successfully in the Android 9 / API 28 x86-64 emulator and Android reported the launcher activity started successfully. The actual game menu rendered in the emulator with the host Mesa graphics backend.
+- Android APK signature verification passes v2/v3 schemes. Manifest minimum API is 24, target API is 36 (from the official Godot template), and ABIs are ARM64 and x86-64. Game assets include the new guide and audio; test/GUT dependencies are excluded.
+- Linux, Windows, macOS, Android test APK/ZIP and the unsigned iOS Xcode project export successfully. Xcode project, Info.plist structures and explicit team placeholder are checked. Archives are CRC-checked and SHA-256 hashes recorded when packaged.
+- Audio was generated offline from original procedural waveforms and bundled as replaceable WAV resources. Speaker output is not acoustically verified in this environment.
+
+## Platform limits
+
+The emulator has no KVM acceleration and is slow enough to produce Android System UI timeouts. Its legacy SwiftShader GLES backend failed Godot canvas shader linking (fragment uniform limit); the host Mesa/llvmpipe backend initialized and rendered the menu. This is documented rather than treating an install/launch alone as a complete gameplay test. Physical Android devices, broad handset/GPU coverage and a full two-film Android touch playthrough are **not verified**. The two-film run is verified in the exported Linux binary; phone interaction/layout/lifecycle behavior is also covered by GUT.
+
+The iOS ZIP is **an exported Xcode project, not an installable IPA**. Xcode compilation, Simulator execution, Apple signing, provisioning, TestFlight and real iOS devices require a Mac and the owner's Apple team; none are claimed here. Windows/macOS runtime checks remain unrun on those operating systems. Production store signing/publishing is not performed. The new GitHub Actions workflow is supplied; its remote execution is separate from these local results.
+
+Source and new packages are prepared for the user's GitHub repository. The previous record below is historical evidence for 0.1, not the current feature/test count. Environment draft saves do not publish a snapshot or prove new-task restoration.
+
+---
+
+## Historical 0.1 record
+
 # Validation record — 2026-10-16
 
 Validated in the provided Linux cloud workspace with **Godot 4.6.3 stable**, **GUT 9.6.1** and Python 3. No credentials or application services were needed.

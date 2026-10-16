@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "godot": "4.6.3",
+  "tests": 46,
+  "assertions": 2934,
+  "android": "debug-signed APK; physical devices untested",
+  "ios": "unsigned Xcode project; requires Mac/Xcode and owner signing; not an IPA"
+}

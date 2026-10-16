@@ -1,0 +1,90 @@
+{
+  "stages": [
+    {
+      "title": "Draft your story",
+      "text": "The draft improves as weeks pass. Consultants are optional.",
+      "label": "Develop for one week",
+      "action": "week"
+    },
+    {
+      "title": "Secure your budget",
+      "text": "Open Film studio and pitch a producer, or use your own cash.",
+      "label": "Choose financing",
+      "action": "studio"
+    },
+    {
+      "title": "Build your team",
+      "text": "Choose your cast and crew, then confirm the package.",
+      "label": "Choose cast & crew",
+      "action": "studio"
+    },
+    {
+      "title": "Prepare the shoot",
+      "text": "Review location, permits and safety in Film studio. Then advance.",
+      "label": "Prepare for one week",
+      "action": "week"
+    },
+    {
+      "title": "Keep the cameras rolling",
+      "text": "Check your spend and burnout. Each week uses production days.",
+      "label": "Shoot for one week",
+      "action": "week"
+    },
+    {
+      "title": "Finish your edit",
+      "text": "Choose how much to polish the edit and check the audience rating.",
+      "label": "Edit for one week",
+      "action": "week"
+    },
+    {
+      "title": "Build anticipation",
+      "text": "Set an affordable weekly campaign spend in Film studio.",
+      "label": "Promote for one week",
+      "action": "week"
+    },
+    {
+      "title": "Choose opening night",
+      "text": "Book screens, select your date and consider rights offers.",
+      "label": "Plan the release",
+      "action": "studio"
+    },
+    {
+      "title": "Follow your opening",
+      "text": "Advance to see the next week\u2019s tickets, reviews and producer income.",
+      "label": "Simulate box-office week",
+      "action": "week"
+    },
+    {
+      "title": "Celebrate, then plan ahead",
+      "text": "Campaign for awards before archiving. Your catalog will keep earning.",
+      "label": "Archive & view filmography",
+      "action": "archive"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Money",
+      "text": "All amounts use lakh BDT. 1 lakh = \u09f3100,000. Your personal cash is separate from a producer-financed film\u2019s budget."
+    },
+    {
+      "term": "Gross vs receipts",
+      "text": "Gross is what audiences pay. Receipts are the producer\u2019s share after cinema splits. Profit is receipts minus actual spending."
+    },
+    {
+      "term": "Backend",
+      "text": "Your negotiated percentage of positive producer profit. You still receive your directing fee if a financed film loses money."
+    },
+    {
+      "term": "Weeks and decisions",
+      "text": "Next week moves production forward. Financing, casting and release require your decision. Automatic time pauses at these gates."
+    },
+    {
+      "term": "Saving on mobile",
+      "text": "The game autosaves each week and when the app goes into the background. Use a manual slot before starting a different career."
+    },
+    {
+      "term": "After a flop",
+      "text": "Use Career to take paid advertising work, recover from burnout or arrange a bridge loan. A flop is not the end."
+    }
+  ]
+}

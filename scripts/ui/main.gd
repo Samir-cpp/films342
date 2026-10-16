@@ -1,6 +1,7 @@
 extends Control
 const Art = preload("res://scripts/ui/art_panel.gd")
 const Chart = preload("res://scripts/ui/chart.gd")
+const Guidance = preload("res://scripts/ui/player_guidance.gd")
 const Verification = preload("res://scripts/sim/verify_career.gd")
 const INK := Color("e5ede9")
 const MUTED := Color("92a8b0")
@@ -13,8 +14,98 @@ var fields: Dictionary = {}
 var selected_traits: Array = []
 var redraw_pending: bool = false
 var return_page: String = "Dashboard"
+var compact: bool = false
+var portrait: bool = false
+var last_notice: String = ""
+var notice_label: Label
+var scroll_positions: Dictionary = {}
+var rendered_page: String = ""
+var drafts: Dictionary = {}
+var board_state: Dictionary = {}
+const DESTINATIONS := ["Dashboard","Film studio","New screenplay","Release calendar","Filmography","Relationships","Industry news","Career","How to play","Achievements","Save manager","Settings","Credits"]
+func mobile_device() -> bool:
+ return OS.has_feature("mobile") or "--mobile-ui" in OS.get_cmdline_user_args()
+func configure_mobile_viewport() -> void:
+ if not mobile_device():return
+ var window := get_window()
+ var physical: Vector2i = window.size
+ var density: float = maxf(1.0,DisplayServer.screen_get_dpi()/160.0)
+ var orientation_size: Vector2i = DisplayServer.screen_get_size() if OS.has_feature("mobile") else physical
+ var tablet: bool = minf(orientation_size.x,orientation_size.y)/density>=600
+ var base_width: int = int(physical.x/density) if tablet else (clampi(int(physical.x/density),360,420) if orientation_size.x<orientation_size.y else clampi(int(physical.x/density),640,1000))
+ var logical := Vector2i(base_width,maxi(1,int(float(base_width)*physical.y/maxi(1,physical.x))))
+ if window.content_scale_size!=logical:window.content_scale_size=logical
+func viewport_changed() -> void:
+ configure_mobile_viewport()
+ # Keyboard resizing must not destroy the focused editor or its dialog.
+ var focused: Control = get_viewport().gui_get_focus_owner()
+ for child in get_children():
+  if child is Window and child.visible:
+   var available: Vector2 = get_viewport_rect().size
+   child.position=Vector2i(maxi(0,int((available.x-child.size.x)/2)),maxi(0,int((available.y-child.size.y)/2)))
+   return
+ if focused is LineEdit or focused is TextEdit:
+  var parent: Node = focused.get_parent()
+  while parent:
+   if parent is ScrollContainer:
+    parent.ensure_control_visible.call_deferred(focused)
+    break
+   parent=parent.get_parent()
+  return
+ schedule_render()
+func receive_notice(message: String) -> void:
+ last_notice=message
+ if is_instance_valid(notice_label):notice_label.text=message
+func responsive_row(parent: Node) -> BoxContainer:
+ var node: BoxContainer = VBoxContainer.new() if portrait else HBoxContainer.new()
+ parent.add_child(node)
+ return node
+func metric_grid(parent: Node) -> GridContainer:
+ var node := GridContainer.new()
+ node.columns=1 if get_viewport_rect().size.x<380 else (2 if compact else 4)
+ node.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+ node.add_theme_constant_override("h_separation",12)
+ node.add_theme_constant_override("v_separation",12)
+ parent.add_child(node)
+ return node
+func remember_form() -> void:
+ if rendered_page not in ["New career","New screenplay"]:return
+ var values: Dictionary = {}
+ for key in fields:
+  var field = fields[key]
+  if field is Dictionary:
+   var nested: Dictionary = {}
+   for stat in field:
+    if is_instance_valid(field[stat]):nested[stat]=field[stat].value
+   values[key]=nested
+  elif is_instance_valid(field):
+   if field is LineEdit or field is TextEdit:values[key]=field.text
+   elif field is SpinBox:values[key]=field.value
+   elif field is OptionButton:values[key]=field.selected
+ drafts[rendered_page]=values
+func restore_form() -> void:
+ for key in drafts.get(page,{}):
+  if not fields.has(key):continue
+  var field = fields[key]
+  var value = drafts[page][key]
+  if field is Dictionary:
+   for stat in value:
+    if field.has(stat):field[stat].value=value[stat]
+  elif field is LineEdit or field is TextEdit:field.text=value
+  elif field is SpinBox:field.value=value
+  elif field is OptionButton:
+   field.select(int(value))
+   field.item_selected.emit(int(value))
+func restore_scroll(area: ScrollContainer, position: int) -> void:
+ area.set_deferred("scroll_vertical",position)
+
 func _ready() -> void:
+ configure_mobile_viewport()
  build_theme()
+ get_viewport().size_changed.connect(viewport_changed)
+ get_tree().auto_accept_quit=false
+ get_tree().quit_on_go_back=false
+ EventBus.notice.connect(receive_notice)
  EventBus.changed.connect(schedule_render)
  render()
  if "--verify-career" in OS.get_cmdline_user_args():
@@ -28,7 +119,7 @@ func build_theme() -> void:
  var base: Font = ThemeDB.fallback_font.duplicate()
  base.fallbacks=[load("res://assets/fonts/NotoSansBengali.ttf")]
  theme_data.default_font=base
- theme_data.default_font_size=int(GameState.settings.font_size)
+ theme_data.default_font_size=maxi(18,int(GameState.settings.font_size)) if mobile_device() else int(GameState.settings.font_size)
  theme_data.set_color("font_color","Label",INK)
  theme_data.set_color("font_color","Button",INK)
  theme_data.set_color("font_hover_color","Button",MINT)
@@ -70,6 +161,12 @@ func go(destination: String) -> void:
  render()
 func render() -> void:
  redraw_pending=false
+ remember_form()
+ if is_instance_valid(body) and body.get_parent() is ScrollContainer:
+  scroll_positions[rendered_page]=body.get_parent().scroll_vertical
+ compact=get_viewport_rect().size.x<1100
+ portrait=get_viewport_rect().size.x<700
+ rendered_page=page
  fields={}
  for child in get_children():
   remove_child(child)
@@ -81,7 +178,14 @@ func render() -> void:
  var margin := MarginContainer.new()
  margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
  for side in ["left","right","top","bottom"]:
-  margin.add_theme_constant_override("margin_"+side,28)
+  margin.add_theme_constant_override("margin_"+side,12 if compact else 28)
+ if OS.has_feature("mobile"):
+  var safe: Rect2i = DisplayServer.get_display_safe_area()
+  if not safe.has_area():safe=Rect2i(Vector2i.ZERO,get_window().size)
+  var physical: Vector2i = get_window().size
+  var ratio: float = get_viewport_rect().size.x/maxi(1,physical.x)
+  for inset in [["left",safe.position.x],["top",safe.position.y],["right",physical.x-safe.end.x],["bottom",physical.y-safe.end.y]]:
+   margin.add_theme_constant_override("margin_"+inset[0],maxi(12,int(float(inset[1])*ratio)))
  add_child(margin)
  var root := VBoxContainer.new()
  margin.add_child(root)
@@ -89,45 +193,59 @@ func render() -> void:
   menu(root)
   return
  var header := hbox(root)
- label(header,"THE DIRECTOR",22,GOLD)
- label(header,"/ DHALLYWOOD",15,MUTED)
+ var brand := label(header,("TD" if get_viewport_rect().size.x<400 else "DIRECTOR") if compact else "THE DIRECTOR",18 if compact else 22,GOLD)
+ if compact:
+  brand.autowrap_mode=TextServer.AUTOWRAP_OFF
+  brand.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN
+  brand.visible=get_viewport_rect().size.x>=380
+ if not compact:label(header,"/ DHALLYWOOD",15,MUTED)
  spacer(header)
  if not GameState.state.is_empty():
-  label(header,GameState.date_text(),16,MUTED)
+  label(header,GameState.date_text().replace("Week ","W") if compact else GameState.date_text(),13 if compact else 16,MUTED)
  button(header,"Menu",func(): go("Main menu"))
  if page=="New career":
   body=scroll(root)
   character_creation()
+  restore_form()
   return
- var split := hbox(root)
- split.size_flags_vertical=Control.SIZE_EXPAND_FILL
- var nav_scroll := ScrollContainer.new()
- nav_scroll.custom_minimum_size.x=205
- nav_scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
- split.add_child(nav_scroll)
- var nav := VBoxContainer.new()
- nav.size_flags_horizontal=Control.SIZE_EXPAND_FILL
- nav.size_flags_vertical=Control.SIZE_EXPAND_FILL
- nav_scroll.add_child(nav)
- for destination in ["Dashboard","Film studio","New screenplay","Release calendar","Filmography","Relationships","Industry news","Career","Achievements","Save manager","Settings","Credits"]:
-  var b := button(nav,destination,func(): go(destination))
-  b.alignment=HORIZONTAL_ALIGNMENT_LEFT
-  if destination==page:
-   b.add_theme_color_override("font_color",MINT)
- spacer(nav,true)
- label(nav,"DHAKA • 2026 ONWARD",11,MUTED)
- label(nav,"All money in lakh BDT",11,MUTED)
+ var shell: BoxContainer = VBoxContainer.new() if compact else HBoxContainer.new()
+ shell.size_flags_vertical=Control.SIZE_EXPAND_FILL
+ root.add_child(shell)
+ if compact:
+  var navigation := option(shell,DESTINATIONS,DESTINATIONS.find(page))
+  navigation.name="MobileNavigation"
+  navigation.item_selected.connect(func(i: int): go(DESTINATIONS[i]))
+ else:
+  var nav_scroll := ScrollContainer.new()
+  nav_scroll.custom_minimum_size.x=205
+  nav_scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
+  shell.add_child(nav_scroll)
+  var nav := VBoxContainer.new()
+  nav.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+  nav.size_flags_vertical=Control.SIZE_EXPAND_FILL
+  nav_scroll.add_child(nav)
+  for destination in DESTINATIONS:
+   var b := button(nav,destination,func(): go(destination))
+   b.alignment=HORIZONTAL_ALIGNMENT_LEFT
+   if destination==page:b.add_theme_color_override("font_color",MINT)
+  spacer(nav,true)
+  label(nav,"All money in lakh BDT",11,MUTED)
  workspace=VBoxContainer.new()
  workspace.size_flags_horizontal=Control.SIZE_EXPAND_FILL
- split.add_child(workspace)
- var heading := hbox(workspace)
- label(heading,page,28,INK)
- spacer(heading)
+ workspace.size_flags_vertical=Control.SIZE_EXPAND_FILL
+ shell.add_child(workspace)
+ var heading: BoxContainer = responsive_row(workspace)
+ if not compact:label(heading,page,28,INK)
+ if not portrait:spacer(heading)
  if not GameState.state.is_empty() and not GameState.state.retired:
-  button(heading,"Ⅱ" if not Clock.paused else "▶",func(): Clock.paused=not Clock.paused; schedule_render(),"Pause / auto-advance. Space toggles time.")
-  var speed := option(heading,["1×","2×","4×"],[1,2,4].find(Clock.speed))
+  var time_controls := hbox(heading)
+  button(time_controls,"Pause" if not Clock.paused else "Auto",func(): Clock.paused=not Clock.paused; schedule_render(),"Automatic weeks pause whenever a production decision is needed.")
+  var speed := option(time_controls,["1×","2×","4×"],[1,2,4].find(Clock.speed))
+  speed.custom_minimum_size.x=70
+  speed.size_flags_horizontal=Control.SIZE_SHRINK_CENTER
   speed.item_selected.connect(func(i: int): Clock.speed=[1,2,4][i])
-  button(heading,Localization.text("next_week")+"  →",func(): GameState.advance_week(),"Advance one week. Events require a decision first.")
+  var next := button(time_controls,Localization.text("next_week")+" →",func(): GameState.advance_week(),"Advance one week. Resolve the event first if a decision is waiting.")
+  next.disabled=not GameState.state.pending_event.is_empty()
  body=scroll(workspace)
  match page:
   "Dashboard": dashboard()
@@ -138,10 +256,15 @@ func render() -> void:
   "Relationships": relationships()
   "Industry news": news()
   "Career": career()
+  "How to play": how_to_play()
   "Achievements": achievements()
   "Save manager": saves()
   "Settings": settings_screen()
   "Credits": credits()
+ restore_form()
+ restore_scroll(body.get_parent(),int(scroll_positions.get(page,0)))
+ notice_label=label(workspace,last_notice if not last_notice.is_empty() else "Autosave keeps your progress each week. Need help? Open How to play.",12,MUTED)
+ notice_label.max_lines_visible=2
  if not GameState.state.is_empty() and not GameState.state.pending_event.is_empty():
   show_event()
  if not GameState.state.is_empty() and GameState.state.retired:
@@ -149,7 +272,7 @@ func render() -> void:
 func label(parent: Node, text: String, size_value: int = 16, color: Color = INK) -> Label:
  var node := Label.new()
  node.text=text
- node.add_theme_font_size_override("font_size",size_value+int(GameState.settings.font_size)-16)
+ node.add_theme_font_size_override("font_size",size_value+(maxi(18,int(GameState.settings.font_size)) if mobile_device() else int(GameState.settings.font_size))-16)
  node.add_theme_color_override("font_color",color)
  node.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
  node.size_flags_horizontal=Control.SIZE_EXPAND_FILL
@@ -158,7 +281,9 @@ func label(parent: Node, text: String, size_value: int = 16, color: Color = INK)
 func button(parent: Node, text: String, action: Callable, hint: String = "") -> Button:
  var node := Button.new()
  node.text=text
- node.custom_minimum_size.y=42
+ node.custom_minimum_size.y=52 if compact or mobile_device() else 44
+ node.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+ node.size_flags_horizontal=Control.SIZE_EXPAND_FILL
  node.tooltip_text=hint if not hint.is_empty() else text
  node.pressed.connect(func(): AudioManager.click(); action.call())
  parent.add_child(node)
@@ -178,6 +303,8 @@ func scroll(parent: Node) -> VBoxContainer:
  var area := ScrollContainer.new()
  area.size_flags_vertical=Control.SIZE_EXPAND_FILL
  area.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+ area.follow_focus=true
+ area.scroll_deadzone=12
  area.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
  parent.add_child(area)
  var contents := VBoxContainer.new()
@@ -199,10 +326,13 @@ func card(parent: Node, title: String, subtitle: String = "") -> VBoxContainer:
  return content
 func option(parent: Node, items: Array, selected: int = 0) -> OptionButton:
  var node := OptionButton.new()
- node.custom_minimum_size.y=42
+ node.custom_minimum_size.y=52 if compact or mobile_device() else 44
  node.size_flags_horizontal=Control.SIZE_EXPAND_FILL
  for item in items:
   node.add_item(str(item))
+ node.fit_to_longest_item=false
+ node.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS
+ node.get_popup().add_theme_constant_override("v_separation",18 if compact else 10)
  node.select(clampi(selected,0,maxi(0,items.size()-1)))
  parent.add_child(node)
  return node
@@ -231,7 +361,7 @@ func spin(parent: Node, title: String, value: float, low: float, high: float, st
  node.max_value=high
  node.step=step
  node.value=value
- node.custom_minimum_size.y=42
+ node.custom_minimum_size.y=52 if compact or mobile_device() else 44
  parent.add_child(node)
  return node
 func meter(parent: Node, title: String, value: float, total: float = 100) -> void:
@@ -256,14 +386,15 @@ func menu(root: VBoxContainer) -> void:
  left_scroll.add_child(left)
  spacer(left,true)
  label(left,"A FILMMAKER’S LIFE",14,MINT)
- label(left,"THE\nDIRECTOR",70,INK)
+ label(left,"THE DIRECTOR" if compact else "THE\nDIRECTOR",38 if compact else 70,INK)
  label(left,"D H A L L Y W O O D",23,GOLD)
  label(left,Localization.text("welcome"),20,MUTED)
  label(left,"Write the story. Build the team.\nMake opening night mean something.",17,MUTED)
  var actions := VBoxContainer.new()
- actions.custom_minimum_size.x=310
+ actions.custom_minimum_size.x=minf(310,get_viewport_rect().size.x-48)
  left.add_child(actions)
- button(actions,Localization.text("new_career"),func(): selected_traits=[]; go("New career"))
+ button(actions,"Quick start · recommended director",func(): request_new_career(true))
+ button(actions,"Create your own director",func(): request_new_career(false))
  if not GameState.state.is_empty():
   button(actions,"Resume career",func(): go("Dashboard"))
  if not SaveManager.read_slot(0).is_empty():
@@ -271,9 +402,11 @@ func menu(root: VBoxContainer) -> void:
  button(actions,Localization.text("settings"),func(): go("Settings"))
  button(actions,"Load career",func(): go("Save manager"))
  button(actions,"Credits",func(): go("Credits"))
- button(actions,"Quit",func(): get_tree().quit())
+ button(actions,"How to play",func(): go("How to play"))
+ if not OS.has_feature("ios"):button(actions,"Save & quit",func(): save_and_quit())
  spacer(left,true)
- label(left,"DESKTOP CAREER SIMULATION  /  v0.1",11,MUTED)
+ label(left,"FILMMAKING CAREER SIMULATION  /  v0.2",11,MUTED)
+ if compact:return
  var art := Art.new()
  art.custom_minimum_size=Vector2(460,400)
  art.size_flags_horizontal=Control.SIZE_EXPAND_FILL
@@ -283,7 +416,7 @@ func menu(root: VBoxContainer) -> void:
 func character_creation() -> void:
  label(body,"Every director has an origin story.",32,INK)
  label(body,"Create a filmmaker • choose two traits • spend up to 405 stat points",16,MUTED)
- var row := hbox(body)
+ var row := responsive_row(body)
  var profile := card(row,"Your identity")
  fields.name=line(profile,"Name","Arian Rahman")
  fields.age=spin(profile,"Age",26,18,60)
@@ -314,11 +447,13 @@ func character_creation() -> void:
   )
  var traits := card(body,"Two defining traits")
  var grid := GridContainer.new()
- grid.columns=5
+ grid.columns=1 if portrait else (2 if compact else 5)
  traits.add_child(grid)
  for trait_data in DataManager.rows("traits"):
   var check := CheckBox.new()
-  check.text=trait_data.name
+  check.text=trait_data.name+"\n+%d %s"%[trait_data.bonus,trait_data.stat]
+  check.custom_minimum_size.y=64
+  if portrait:check.add_theme_font_size_override("font_size",mini(20,int(GameState.settings.font_size)))
   check.tooltip_text="+%d %s"%[trait_data.bonus,trait_data.stat]
   check.button_pressed=trait_data.id in selected_traits
   grid.add_child(check)
@@ -346,13 +481,14 @@ func character_creation() -> void:
  )
 func dashboard() -> void:
  if not require_career(): return
+ next_action_card(body)
  var s: Dictionary = GameState.state
- var metrics := hbox(body)
+ var metrics := metric_grid(body)
  metric(metrics,"CASH","৳%.1f L"%s.cash,MINT)
  metric(metrics,"INDUSTRY","%.0f / 100"%s.industry,GOLD)
  metric(metrics,"CRITICS","%.0f / 100"%s.critics,Color("b59de0"))
  metric(metrics,"AUDIENCE","%.0f / 100"%s.audience,Color("80b7e8"))
- var row := hbox(body)
+ var row := responsive_row(body)
  var focus := card(row,"Your next story",GameState.holiday_at(s.week).name+" · "+GameState.date_text())
  if s.active.is_empty():
   label(focus,"The slate is yours.",30,INK)
@@ -392,7 +528,7 @@ func screenplay() -> void:
   label(body,"Finish and archive your current film before starting another.",18,MUTED)
   button(body,"Open current film",func(): go("Film studio"))
   return
- var row := hbox(body)
+ var row := responsive_row(body)
  var paper := card(row,"A blank page. A thousand possibilities.")
  fields.title=line(paper,"Film title")
  fields.logline=line(paper,"Logline")
@@ -420,16 +556,17 @@ func studio() -> void:
   label(body,"No film in production.",22,MUTED)
   button(body,"Start a screenplay",func(): go("New screenplay"))
   return
- var summary := hbox(body)
+ next_action_card(body)
+ var summary := responsive_row(body)
  var poster := Art.new()
- poster.custom_minimum_size=Vector2(200,240)
+ poster.custom_minimum_size=Vector2(150,170) if compact else Vector2(200,240)
  poster.title=f.title
  poster.tint=Color(DataManager.rows("genres")[int(f.genre)].color)
  summary.add_child(poster)
  var details := card(summary,f.title,f.get("logline",""))
  label(details,DataManager.config("content").stage_labels[int(f.stage)].to_upper(),14,MINT)
  meter(details,"Schedule",minf(f.progress,f.stage_total),maxf(1,f.stage_total))
- var metrics := hbox(details)
+ var metrics := metric_grid(details)
  metric(metrics,"BUDGET","৳%.0f L"%f.budget,GOLD)
  metric(metrics,"SPENT","৳%.1f L"%f.spent,MINT)
  metric(metrics,"QUALITY","%.0f"%f.quality,INK)
@@ -467,7 +604,7 @@ func financing(f: Dictionary) -> void:
  var backend := spin(panel,"Backend %",10,0,50)
  var control := spin(panel,"Creative control %",60,0,100)
  for p in DataManager.rows("producers"):
-  var row := hbox(panel)
+  var row := responsive_row(panel)
   label(row,"%s · %s · up to ৳%d L · %s"%[DataManager.display_name(p),p.personality,p.budget_range[1],p.red_flag],14,MUTED)
   button(row,"Pitch",func(): GameState.finance(p.id,backend.value/100,int(control.value)))
  var own := button(panel,"Self-finance · remaining ৳%.1f L"%(f.budget-f.spent),func(): GameState.self_finance())
@@ -479,18 +616,35 @@ func packaging(f: Dictionary) -> void:
  tabs.custom_minimum_size.y=380
  panel.add_child(tabs)
  for table in ["actors","actresses","new_talent","crew"]:
+  var tab := VBoxContainer.new()
+  tab.name=table.capitalize()
+  tabs.add_child(tab)
+  var search := LineEdit.new()
+  search.placeholder_text="Search name or role (e.g. Writer, DOP)"
+  search.custom_minimum_size.y=52
+  search.text=board_state.get(table+"_search","")
+  tab.add_child(search)
   var area := ScrollContainer.new()
-  area.name=table.capitalize()
-  tabs.add_child(area)
+  area.size_flags_vertical=Control.SIZE_EXPAND_FILL
+  area.follow_focus=true
+  tab.add_child(area)
   var list := VBoxContainer.new()
   list.size_flags_horizontal=Control.SIZE_EXPAND_FILL
   area.add_child(list)
   for p in DataManager.rows(table):
-   var row := hbox(list)
+   var row := responsive_row(list)
+   row.set_meta("search",(DataManager.display_name(p)+" "+p.profession).to_lower())
    label(row,"%s · %s · Tier %d · ৳%.0f L · %.0f%% available"%[DataManager.display_name(p),p.profession,p.tier,p.fee_range[0],p.availability*100],14,MUTED)
    var hired: bool = p.id in f.cast or p.id in f.crew
    var hire_button := button(row,"Hired" if hired else "Hire",func(): GameState.hire(table,p.id))
-   hire_button.disabled=hired
+   hire_button.disabled=hired or f["crew" if table=="crew" else "cast"].size()>=(12 if table=="crew" else 3)
+  search.text_changed.connect(func(query: String):
+   board_state[table+"_search"]=query
+   filter_people(list,query)
+  )
+  filter_people(list,search.text)
+ tabs.current_tab=clampi(int(board_state.get("casting_tab",0)),0,tabs.get_tab_count()-1)
+ tabs.tab_changed.connect(func(index: int):board_state.casting_tab=index)
  button(panel,"Lock package  →",func(): GameState.complete_packaging()).disabled=f.cast.is_empty() or f.crew.is_empty()
 func preproduction(f: Dictionary) -> void:
  var panel := card(body,"Plan before the first call","Permits, scouting, rehearsals and safety reduce production risk.")
@@ -538,18 +692,19 @@ func rights_table(f: Dictionary) -> void:
    for key in f.rights:
     if f.rights[key].category==table: exclusive=true
   for buyer in DataManager.rows(table):
-   var row := hbox(panel)
+   var row := responsive_row(panel)
    label(row,"%s · %s · window +%d weeks"%[DataManager.display_name(buyer),table.replace("_"," "),int(buyer.get("window",0))],14,MUTED)
    var sold: bool = f.rights.has(table+buyer.id)
    var b := button(row,"Signed" if sold else "Negotiate license",func(): GameState.sell_rights(table,buyer.id))
    b.disabled=sold or exclusive
 func boxoffice(f: Dictionary) -> void:
  var panel := card(body,"The box office","Gross ticket sales are not producer income. Watch retention and the break-even line.")
- var row := hbox(panel)
+ var row := responsive_row(panel)
  metric(row,"GROSS","৳%.1f L"%f.gross,MINT)
  metric(row,"RECEIPTS","৳%.1f L"%f.receipts,GOLD)
  metric(row,"BREAK-EVEN GAP","৳%.1f L"%maxf(0,f.spent-f.receipts),INK)
  var chart := Chart.new()
+ chart.custom_minimum_size.x=0
  chart.history=f.history
  panel.add_child(chart)
  label(panel,f.get("review",""),18,GOLD)
@@ -559,16 +714,17 @@ func boxoffice(f: Dictionary) -> void:
  rights_table(f)
 func after_release(f: Dictionary) -> void:
  var panel := card(body,"The final statement", "Opening night becomes a filmography.")
- var row := hbox(panel)
+ var row := responsive_row(panel)
  metric(row,"PRODUCER PROFIT","৳%.1f L"%f.profit,MINT if f.profit>=0 else Color("ed9566"))
  metric(row,"DIRECTOR INCOME","৳%.1f L"%f.director_income,GOLD)
  label(panel,"Quality %.0f · Gross ৳%.1f L · Cost ৳%.1f L"%[f.quality,f.gross,f.spent],18,INK)
  var chart := Chart.new()
+ chart.custom_minimum_size.x=0
  chart.history=f.history
  panel.add_child(chart)
  var awards := card(body,"Awards season","A campaign buys consideration; quality and jury variation determine the outcome.")
  for award in DataManager.rows("festivals_and_awards"):
-  var campaign_row := hbox(awards)
+  var campaign_row := responsive_row(awards)
   label(campaign_row,award.name,16,MUTED)
   button(campaign_row,"Considered" if award.id in f.awards else "Campaign · ৳%d L"%award.campaign_cost,func(): GameState.campaign(award.id)).disabled=award.id in f.awards
  button(body,"Archive film & develop your next story  →",func(): GameState.archive_film(); go("Filmography"))
@@ -592,7 +748,7 @@ func filmography() -> void:
   label(panel,"Quality %.0f  •  Gross ৳%.1f L  •  Producer profit ৳%.1f L  •  Catalog income ৳%.1f L"%[f.quality,f.gross,f.profit,f.catalog_income],16,MUTED)
   for award_id in f.get("award_results",{}):
    if f.award_results[award_id]: label(panel,"★ "+DataManager.entry("festivals_and_awards",award_id).name,15,GOLD)
-  var row := hbox(panel)
+  var row := responsive_row(panel)
   button(row,"Develop sequel",func():
    if GameState.state.active.is_empty():
     var idea: Dictionary = {"title":f.title+" II","logline":f.logline,"synopsis":f.synopsis,"setting":f.setting,"genre":f.genre,"theme":f.theme,"tone":f.tone,"era":f.era,"rating":f.rating,"source":4,"tier":f.tier}
@@ -620,7 +776,7 @@ func career() -> void:
  meter(panel,"Burnout",s.stress)
  label(panel,"Cash ৳%.1f L • Debt ৳%.1f L • %s"%[s.cash,s.debt,"Own production house" if s.house else "Independent director"],17,GOLD)
  for stat in s.stats:
-  var row := hbox(panel)
+  var row := responsive_row(panel)
   label(row,"%s  %.0f / 100"%[stat,s.stats[stat]],15,MUTED)
   button(row,"Masterclass · ৳3 L",func(): GameState.career_action("train",stat))
  var actions := card(body,"Career choices","Each choice advances one week. Financial recovery remains available after a flop.")
@@ -643,7 +799,7 @@ func saves() -> void:
  label(body,"Five manual slots and a separate weekly autosave. Loading pauses the calendar.",16,MUTED)
  for slot in range(6):
   var panel := card(body,"Autosave" if slot==0 else "Slot %d"%slot,SaveManager.label_for(slot))
-  var row := hbox(panel)
+  var row := responsive_row(panel)
   if slot>0:
    button(row,"Save here",func():
     var dialog := ConfirmationDialog.new()
@@ -651,6 +807,7 @@ func saves() -> void:
     add_child(dialog)
     dialog.confirmed.connect(func():
      var result: Error = SaveManager.save_slot(slot)
+     receive_notice("Career saved to slot %d."%slot if result==OK else "Save failed. Your previous slot was preserved.")
      if result==OK: schedule_render()
     )
     dialog.popup_centered()
@@ -663,6 +820,8 @@ func settings_screen() -> void:
  for setting in [["music","Calm music"],["sound","UI sounds"],["fictionalize","Fictionalize names"]]:
   var check := CheckBox.new()
   check.text=setting[1]
+  check.custom_minimum_size.y=52
+  if portrait:check.add_theme_font_size_override("font_size",mini(20,int(GameState.settings.font_size)))
   check.button_pressed=GameState.settings.get(setting[0],true)
   panel.add_child(check)
   check.toggled.connect(func(enabled: bool):
@@ -671,7 +830,7 @@ func settings_screen() -> void:
    SaveManager.save_settings()
   )
  var scale_control := spin(panel,"UI scale (apply below)",GameState.settings.ui_scale,.8,1.4,.1)
- var font_control := spin(panel,"Font size (apply below)",GameState.settings.font_size,14,24,1)
+ var font_control := spin(panel,"Font size (apply below)",maxi(18,GameState.settings.font_size) if mobile_device() else GameState.settings.font_size,18 if mobile_device() else 14,24,1)
  label(panel,"Language: English UI, Bengali navigation preview",14,MUTED)
  var language_control := option(panel,["English","বাংলা · navigation preview"],0 if GameState.settings.language=="en" else 1)
  button(panel,"Apply display settings",func():
@@ -695,15 +854,16 @@ func show_event() -> void:
  overlay.color=Color(0,0,0,.75)
  overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
  add_child(overlay)
- var center := CenterContainer.new()
- center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
- overlay.add_child(center)
- var panel := card(center,"A decision on your desk",event.name)
- panel.custom_minimum_size.x=650
+ var margin := MarginContainer.new()
+ margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+ for side in ["left","right","top","bottom"]:margin.add_theme_constant_override("margin_"+side,18 if compact else 64)
+ overlay.add_child(margin)
+ var event_body := scroll(margin)
+ var panel := card(event_body,"A decision on your desk",event.name)
  label(panel,event.description,20,INK)
  for i in range(event.choices.size()):
   var choice: Dictionary = event.choices[i]
-  button(panel,"%s   /   ৳%+.0f L · quality %+.0f · hype %+.0f"%[choice.label,choice.cash,choice.quality,choice.hype],func(): GameState.choose_event(i))
+  button(panel,"%s\n৳%+.0f lakh · quality %+.0f · hype %+.0f"%[choice.label,choice.cash,choice.quality,choice.hype],func(): GameState.choose_event(i))
 func _unhandled_key_input(event: InputEvent) -> void:
  if not event is InputEventKey or not event.pressed or event.echo:
   return
@@ -718,7 +878,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
   go("Main menu" if page!="Main menu" else "Dashboard")
 func smoke_ui() -> void:
  GameState.new_career({"name":"UI Test","age":26,"district":"Dhaka","background":0,"traits":["trait_0","trait_1"]},342)
- for screen in ["Main menu","New career","Dashboard","New screenplay","Release calendar","Filmography","Relationships","Industry news","Career","Achievements","Save manager","Settings","Credits"]:
+ for screen in ["Main menu","New career","Dashboard","New screenplay","Release calendar","Filmography","Relationships","Industry news","Career","How to play","Achievements","Save manager","Settings","Credits"]:
   go(screen)
   await get_tree().process_frame
  GameState.create_film({"title":"UI Test","logline":"A test","synopsis":"Test","setting":"Dhaka","genre":0,"tier":0,"source":0,"rating":"U","theme":"Belonging","tone":"Hopeful","era":"Present day"})
@@ -731,23 +891,24 @@ func smoke_ui() -> void:
   f.opening=.5
   go("Film studio")
   await get_tree().process_frame
- print("UI_SMOKE_OK: 13 screens and all 10 film stages rendered")
+ print("UI_SMOKE_OK: 14 screens and all 10 film stages rendered")
  get_tree().quit()
 
 func capture_ui() -> void:
- DirAccess.make_dir_recursive_absolute("res://builds/screenshots")
+ var capture_dir: String = "res://builds/screenshots/"+("phone-portrait" if portrait else "phone-landscape") if mobile_device() else "res://builds/screenshots/desktop"
+ DirAccess.make_dir_recursive_absolute(capture_dir)
  for screen in ["Main menu","New career"]:
   go(screen)
-  await get_tree().process_frame
+  await get_tree().create_timer(.3).timeout
   await RenderingServer.frame_post_draw
-  get_viewport().get_texture().get_image().save_png("res://builds/screenshots/"+screen.to_snake_case()+".png")
+  get_viewport().get_texture().get_image().save_png(capture_dir+"/"+screen.to_snake_case()+".png")
  GameState.new_career({"name":"Mira Rahman","age":28,"district":"Dhaka","background":0,"traits":["trait_2","trait_5"]},342)
  GameState.create_film({"title":"The Last Ferry","logline":"One river. Two generations. A journey home.","synopsis":"A daughter returns to the river she once left behind.","setting":"Sadarghat","genre":0,"tier":0,"source":0,"rating":"U","theme":"Family","tone":"Hopeful","era":"Present day"})
  for screen in ["Dashboard","Film studio","Release calendar"]:
   go(screen)
   await get_tree().create_timer(.6).timeout
   await RenderingServer.frame_post_draw
-  get_viewport().get_texture().get_image().save_png("res://builds/screenshots/"+screen.to_snake_case()+".png")
+  get_viewport().get_texture().get_image().save_png(capture_dir+"/"+screen.to_snake_case()+".png")
  print("UI_CAPTURE_OK")
  get_tree().quit()
 
@@ -755,3 +916,87 @@ func verify_export() -> void:
  var valid: bool = Verification.run()
  if not valid:push_error("CAREER_VERIFICATION_FAILED")
  get_tree().quit(0 if valid else 1)
+
+func request_new_career(quick: bool) -> void:
+ var begin := func():
+  drafts.erase("New career")
+  selected_traits=["trait_1","trait_5"]
+  if quick:quick_start()
+  else:go("New career")
+ if GameState.state.is_empty():begin.call();return
+ var dialog := ConfirmationDialog.new()
+ dialog.title="Start a different career?"
+ dialog.dialog_text="Your current autosave will be replaced. Keep this career in a manual slot using Save manager before starting again."
+ add_child(dialog)
+ dialog.confirmed.connect(begin)
+ dialog.confirmed.connect(dialog.queue_free)
+ dialog.canceled.connect(dialog.queue_free)
+ dialog.popup_centered(Vector2i(mini(500,int(size.x)-32),220))
+func quick_start() -> void:
+ var dialog := AcceptDialog.new()
+ dialog.title="Your first day in Dhallywood"
+ dialog.ok_button_text="Begin career"
+ add_child(dialog)
+ var form := VBoxContainer.new()
+ dialog.add_child(form)
+ label(form,"Choose a name. We’ll handle the stats and traits so you can start learning by making your first film.",16,MUTED)
+ var name_field := line(form,"Director name","Arian Rahman") as LineEdit
+ dialog.confirmed.connect(func():
+  var stats: Dictionary = {}
+  for stat in DataManager.config("economy").stats:stats[stat]=45
+  var name_value: String = name_field.text.strip_edges()
+  if name_value.is_empty():name_value="Arian Rahman"
+  GameState.new_career({"name":name_value,"age":26,"gender":"Prefer not to say","district":"Dhaka","background":0,"traits":["trait_1","trait_5"],"avatar":0,"stats":stats},342)
+  SaveManager.save_slot(0)
+  drafts.clear()
+  go("Dashboard")
+  dialog.queue_free()
+ )
+ dialog.canceled.connect(dialog.queue_free)
+ dialog.popup_centered(Vector2i(mini(500,int(size.x)-32),260))
+func next_action_card(parent: Node) -> void:
+ var recommendation: Dictionary = Guidance.next_step(GameState.state)
+ var panel := card(parent,"NEXT STEP · "+recommendation.title,recommendation.text)
+ var action := button(panel,recommendation.label,func():
+  match recommendation.action:
+   "new":request_new_career(true)
+   "screenplay":go("New screenplay")
+   "studio":go("Film studio")
+   "week":GameState.advance_week()
+   "package":GameState.complete_packaging()
+   "release":GameState.begin_release()
+   "archive":GameState.archive_film();go("Filmography")
+   "catalog":go("Filmography")
+ )
+ action.name="RecommendedAction"
+ action.add_theme_color_override("font_color",MINT)
+ action.disabled=recommendation.action=="event"
+func how_to_play() -> void:
+ label(body,"One story at a time.",28,GOLD)
+ label(body,"Follow NEXT STEP on Dashboard or Film studio. Nothing moves until you choose Next week or turn on Auto. Your first independent film is a good place to learn.",18,INK)
+ for entry in DataManager.config("player_guide").glossary:
+  var panel := card(body,entry.term)
+  label(panel,entry.text,16,MUTED)
+ if not GameState.state.is_empty():button(body,"Back to my next step",func():go("Dashboard"))
+func save_and_quit() -> void:
+ Clock.paused=true
+ if not GameState.state.is_empty():
+  if SaveManager.save_slot(0)!=OK:
+   receive_notice("Could not save. Use Save manager before quitting.")
+   return
+ AudioManager.update_volume()
+ get_tree().quit()
+func _notification(what: int) -> void:
+ if what==NOTIFICATION_APPLICATION_PAUSED or what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+  Clock.paused=true
+  if not GameState.state.is_empty():SaveManager.save_slot(0)
+ elif what==NOTIFICATION_APPLICATION_RESUMED or what==NOTIFICATION_APPLICATION_FOCUS_IN:
+  schedule_render()
+ elif what==NOTIFICATION_WM_GO_BACK_REQUEST:
+  if not GameState.state.is_empty() and not GameState.state.pending_event.is_empty():return
+  go("Dashboard" if page not in ["Main menu","Dashboard"] else "Main menu")
+ elif what==NOTIFICATION_WM_CLOSE_REQUEST:save_and_quit()
+
+func filter_people(list: VBoxContainer, query: String) -> void:
+ for row in list.get_children():
+  row.visible=query.strip_edges().to_lower() in str(row.get_meta("search",""))

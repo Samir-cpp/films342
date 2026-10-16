@@ -2,7 +2,7 @@ class_name BoxOfficeChart
 extends Control
 var history: Array = []
 func _ready() -> void:
- custom_minimum_size=Vector2(400,230)
+ custom_minimum_size=Vector2(0,230)
  mouse_filter=Control.MOUSE_FILTER_IGNORE
 func _draw() -> void:
  var area := Rect2(55,24,size.x-85,size.y-60)
